@@ -1,0 +1,57 @@
+{
+    "menu":{
+    "Desayuno":{
+        "Producto": {
+            "Café con leche":{ 
+                "Precio": 4,
+                "imagen": "alguna img"
+        },
+        "Café Americano":{
+            "Precio": 4,
+            "imagen":"alguna img"
+        }, 
+        "Sandwich Jamón y Queso":{
+            "Precio": 4,
+            "imagen":"alguna img"
+        }, 
+        "Jugo de frutas":{
+            "Precio": 4,
+            "imagen":"alguna img"
+        }
+    }
+},
+
+    "Almuerzo/Cena":{
+        "Producto":{
+            "Hamburguesas":{
+                "Hamburguesa Sencilla":{
+                    "Precio": 4,
+                    "imagen": "alguna img",
+                    "tipo" : ["Res", "Pollo", "Vegetariana"],
+                    "Adicionales":{
+                        "Queso":{"Precio": 1},
+                        "Huevo":{"Precio": 1}
+                    }
+                },
+                "Hamburguesa Doble":{
+                    "Precio": 4,
+                    "imagen": "alguna img",
+                    "tipo" : ["Res", "Pollo", "Vegetariana"],
+                    "Adicionales":{
+                        "Queso":{"Precio": 1},
+                        "Huevo":{"Precio": 1}
+                    }
+                }
+            },
+            "Acompañamientos":{
+                
+            },
+            "Bebidas":{
+
+            }
+        }
+    
+    }
+
+}
+}
