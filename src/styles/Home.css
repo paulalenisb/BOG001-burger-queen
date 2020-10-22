@@ -1,4 +1,4 @@
-.Start {
+.Home {
   width: 100vw;
   height: 100vh;
   text-align: center;
@@ -9,17 +9,19 @@
   align-items: center;
 }
 
-.Start-logo {
+.Home-logo {
   height: 30vmin;
   pointer-events: none;
 }
 
-.Start-btn {
+.Home-btn {
   width: 200px;
   height: 50px;
+  margin: 30px 40px;
   border-radius: 20px;
-  margin: 20px 40px;
+  border: none;
   font-size: 20px;
+  box-shadow:4px 4px 4px rgba(0, 0, 0, 0.4);
 }
 
 /* @media (prefers-reduced-motion: no-preference) {
