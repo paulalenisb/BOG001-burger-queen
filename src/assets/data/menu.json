@@ -1,25 +1,25 @@
 {
-    "menu":{
+  "menu":{
     "Desayuno":{
-        "Producto": {
-            "Café con leche":{ 
-                "Precio": 4,
-                "imagen": "alguna img"
+      "Producto": {
+        "Café con leche":{
+          "Precio": 4,
+          "imagen": "alguna img"
         },
-        "Café Americano":{
-            "Precio": 4,
-            "imagen":"alguna img"
-        }, 
-        "Sandwich Jamón y Queso":{
-            "Precio": 4,
-            "imagen":"alguna img"
-        }, 
+        "Café americano":{
+          "Precio": 4,
+          "imagen":"alguna img"
+        },
+        "Sandwich jamón y queso":{
+          "Precio": 4,
+          "imagen":"alguna img"
+        },
         "Jugo de frutas":{
-            "Precio": 4,
-            "imagen":"alguna img"
+          "Precio": 4,
+          "imagen":"alguna img"
         }
-    }
-},
+      }
+    },
 
     "Almuerzo/Cena":{
         "Producto":{
@@ -44,13 +44,13 @@
                 }
             },
             "Acompañamientos":{
-                
+
             },
             "Bebidas":{
 
             }
         }
-    
+
     }
 
 }

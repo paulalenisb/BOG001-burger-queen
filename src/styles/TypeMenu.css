@@ -1,0 +1,27 @@
+.Type-menu {
+    width:90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+    list-style-type: none;
+}
+
+.Type-menu li {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  padding: 6px;
+  border: 2px solid #E0052D;
+}
+
+.Menu-breakfast {
+    border-radius: 20px 0 0 20px;
+    background-color: #E0052D;
+    color:white;
+}
+
+.Menu-other {
+    border-radius: 0 20px 20px 0;
+    color: #E0052D;
+}

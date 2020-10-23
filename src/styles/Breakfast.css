@@ -1,0 +1,19 @@
+.Product-card {
+  width: 230px;
+  height: 230px;
+  margin: 20px 0;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

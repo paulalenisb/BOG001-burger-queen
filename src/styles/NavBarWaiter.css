@@ -1,4 +1,31 @@
-.Nav-Waiter{
+.Header-nav-waiter {
+  width: 100vw;
+  height: 80px;
+  background-color: #E0052D;
+  position: fixed;
+  top: 0;
+  font-size: 1.5em;
+  color: white; /* ¿Blanco? */
+  display:flex;
+  justify-content: space-around;
+}
+
+.Nav-waiter {
+  width: 42%;
   display: flex;
-  
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+
+.Nav-home-icon {
+  width: 40px;
+  height: auto;
+  /* stroke-width: 30px ;
+  fill: #E0052D; */
+}
+
+.Nav-waiter-logo {
+  width: auto;
+  height: 70px;
 }
