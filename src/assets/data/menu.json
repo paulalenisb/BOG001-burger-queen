@@ -20,38 +20,49 @@
         }
       }
     },
-
     "Almuerzo/Cena":{
-        "Producto":{
-            "Hamburguesas":{
-                "Hamburguesa Sencilla":{
-                    "Precio": 4,
-                    "imagen": "alguna img",
-                    "tipo" : ["Res", "Pollo", "Vegetariana"],
-                    "Adicionales":{
-                        "Queso":{"Precio": 1},
-                        "Huevo":{"Precio": 1}
-                    }
-                },
-                "Hamburguesa Doble":{
-                    "Precio": 4,
-                    "imagen": "alguna img",
-                    "tipo" : ["Res", "Pollo", "Vegetariana"],
-                    "Adicionales":{
-                        "Queso":{"Precio": 1},
-                        "Huevo":{"Precio": 1}
-                    }
-                }
-            },
-            "Acompañamientos":{
-
-            },
-            "Bebidas":{
-
+      "Producto":{
+        "Hamburguesas":{
+          "Hamburguesa sencilla":{
+            "Precio": 4,
+            "imagen": "alguna img",
+            "tipo" : ["Res", "Pollo", "Vegetariana"],
+            "Adicionales":{
+              "Queso":{"Precio": 1},
+              "Huevo":{"Precio": 1}
             }
+          },
+          "Hamburguesa Ddble":{
+            "Precio": 4,
+            "imagen": "alguna img",
+            "tipo" : ["Res", "Pollo", "Vegetariana"],
+            "Adicionales":{
+              "Queso":{"Precio": 1},
+              "Huevo":{"Precio": 1}
+            }
+          }
+        },
+        "Acompañamientos":{
+          "Papas fritas":{"Precio": 5},
+          "Aros de cebolla":{"Precio": 5}
+        },
+        "Bebidas":{
+          "Agua 500ml":{"Precio": 5},
+          "Agua 7500ml":{"Precio": 7},
+          "Bebida/gasesosa 500ml":{"Precio": 7},
+          "Bebida/gasesosa 7500ml":{"Precio": 10}
+        },
+        "Bebidas 2":{
+          "Agua":{
+            "500ml":{"Precio": 5},
+            "7500ml":{"Precio": 7}
+          },
+          "Bebida/gaseosa":{
+            "500ml":{"Precio": 7},
+            "7500ml":{"Precio": 10}
+          }
         }
-
+      }
     }
-
-}
+  }
 }
