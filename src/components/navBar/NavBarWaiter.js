@@ -11,6 +11,7 @@ export default function NavBarWaiter() {
     <header className='Header-nav-waiter'>
         <div className="Nav-container-left">
           <ul className='Nav-waiter'>
+
             <li className='Nav-waiter-item'onClick={() => { history.push("/"); }}>
               <img src={home} className='Nav-home-icon' alt='Icon Home'/>
             </li>
