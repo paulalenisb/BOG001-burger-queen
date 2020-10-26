@@ -1,58 +1,82 @@
 {
   "menu":{
-    "Desayuno":{
-      "Producto": {
-        "Café americano":{
-          "Precio": 5,
-          "imagen":"https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
-        },
-        "Café con leche":{
-          "Precio": 7,
-          "imagen": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/hub-image-coffee-e732616.jpg?quality=90&resize=504,458"
-        },
-        "Sandwich jamón y queso":{
-          "Precio": 10,
-          "imagen":"https://okdiario.com/img/2018/03/18/sandwich-mixto-655x368.jpg"
-        },
-        "Jugo de frutas":{
-          "Precio": 7,
-          "imagen":"https://cdn-3.expansion.mx/dims4/default/d49f1dc/2147483647/strip/true/crop/732x384+0+43/resize/1200x630!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F76%2Fbc%2F5ea06e1c41dab8c510b3c8370d39%2Fistock-654357990.jpg"
-        }
+    "Café americano":{
+      "type": "Breakfast",
+      "price": 5,
+      "image":"/static/media/breakfast-cafe-americano.9dfb93da.png"
+    },
+    "Café con leche":{
+      "type": "Breakfast",
+      "price": 7,
+      "image": "/static/media/breakfast-cafe-leche.c95bcfd9.png"
+    },
+    "Sandwich jamón y queso":{
+      "type": "Breakfast",
+      "price": 10,
+      "image":"/static/media/breakfast-sandwich.206fb8d3.png"
+    },
+    "Jugo de frutas":{
+      "type": "Breakfast",
+      "price": 7,
+      "image":"/static/media/breakfast-jugo-frutas.8a2e831f.png"
+    },
+    "Hamburguesa sencilla":{
+      "type": "Lunch-Dinner",
+      "submenu":"Hamburgers",
+      "price": 10,
+      "image": "alguna img",
+      "meat" : ["Res", "Pollo", "Vegetariana"],
+      "toppings":{
+        "Queso":{"price": 1},
+        "Huevo":{"price": 1}
       }
     },
-    "Almuerzo/Cena":{
-      "Producto":{
-        "Hamburguesas":{
-          "Hamburguesa sencilla":{
-            "Precio": 10,
-            "imagen": "alguna img",
-            "tipo" : ["Res", "Pollo", "Vegetariana"],
-            "Adicionales":{
-              "Queso":{"Precio": 1},
-              "Huevo":{"Precio": 1}
-            }
-          },
-          "Hamburguesa Ddble":{
-            "Precio": 15,
-            "imagen": "alguna img",
-            "tipo" : ["Res", "Pollo", "Vegetariana"],
-            "Adicionales":{
-              "Queso":{"Precio": 1},
-              "Huevo":{"Precio": 1}
-            }
-          }
-        },
-        "Acompañamientos":{
-          "Papas fritas":{"Precio": 5},
-          "Aros de cebolla":{"Precio": 5}
-        },
-        "Bebidas":{
-          "Agua 500ml":{"Precio": 5},
-          "Agua 7500ml":{"Precio": 7},
-          "Bebida/gasesosa 500ml":{"Precio": 7},
-          "Bebida/gasesosa 7500ml":{"Precio": 10}
-        }
+    "Hamburguesa doble":{
+      "type": "Lunch-Dinner",
+      "submenu":"Hamburgers",
+      "price": 15,
+      "image": "alguna img",
+      "meat" : ["Res", "Pollo", "Vegetariana"],
+      "toppings":{
+        "Queso":{"price": 1},
+        "Huevo":{"price": 1}
       }
+    },
+    "Papas fritas":{
+      "type": "Lunch-Dinner",
+      "submenu":"Acompañamientos",
+      "price": 5,
+      "image": "alguna img"
+    },
+    "Aros de cebolla":{
+      "type": "Lunch-Dinner",
+      "submenu":"Acompañamientos",
+      "price": 5,
+      "image": "alguna img"
+    },
+    "Agua 500ml":{
+      "type": "Lunch-Dinner",
+      "submenu":"Drinks",
+      "price": 5,
+      "image": "alguna img"
+    },
+    "Agua 7500ml":{
+      "type": "Lunch-Dinner",
+      "submenu":"Drinks",
+      "price": 7,
+      "image": "alguna img"
+    },
+    "Bebida/gasesosa 500ml":{
+      "type": "Lunch-Dinner",
+      "submenu":"Drinks",
+      "price": 7,
+      "image": "alguna img"
+    },
+    "Bebida/gasesosa 7500ml":{
+      "type": "Lunch-Dinner",
+      "submenu":"Drinks",
+      "price": 10,
+      "image": "alguna img"
     }
   }
 }
