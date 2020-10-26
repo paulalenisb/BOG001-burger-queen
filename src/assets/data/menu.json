@@ -2,21 +2,21 @@
   "menu":{
     "Desayuno":{
       "Producto": {
-        "Café con leche":{
-          "Precio": 4,
-          "imagen": "alguna img"
-        },
         "Café americano":{
-          "Precio": 4,
-          "imagen":"alguna img"
+          "Precio": 5,
+          "imagen":"https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
+        },
+        "Café con leche":{
+          "Precio": 7,
+          "imagen": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/hub-image-coffee-e732616.jpg?quality=90&resize=504,458"
         },
         "Sandwich jamón y queso":{
-          "Precio": 4,
-          "imagen":"alguna img"
+          "Precio": 10,
+          "imagen":"https://okdiario.com/img/2018/03/18/sandwich-mixto-655x368.jpg"
         },
         "Jugo de frutas":{
-          "Precio": 4,
-          "imagen":"alguna img"
+          "Precio": 7,
+          "imagen":"https://cdn-3.expansion.mx/dims4/default/d49f1dc/2147483647/strip/true/crop/732x384+0+43/resize/1200x630!/quality/90/?url=https%3A%2F%2Fcdn-3.expansion.mx%2F76%2Fbc%2F5ea06e1c41dab8c510b3c8370d39%2Fistock-654357990.jpg"
         }
       }
     },
@@ -24,7 +24,7 @@
       "Producto":{
         "Hamburguesas":{
           "Hamburguesa sencilla":{
-            "Precio": 4,
+            "Precio": 10,
             "imagen": "alguna img",
             "tipo" : ["Res", "Pollo", "Vegetariana"],
             "Adicionales":{
@@ -33,7 +33,7 @@
             }
           },
           "Hamburguesa Ddble":{
-            "Precio": 4,
+            "Precio": 15,
             "imagen": "alguna img",
             "tipo" : ["Res", "Pollo", "Vegetariana"],
             "Adicionales":{
@@ -51,16 +51,6 @@
           "Agua 7500ml":{"Precio": 7},
           "Bebida/gasesosa 500ml":{"Precio": 7},
           "Bebida/gasesosa 7500ml":{"Precio": 10}
-        },
-        "Bebidas 2":{
-          "Agua":{
-            "500ml":{"Precio": 5},
-            "7500ml":{"Precio": 7}
-          },
-          "Bebida/gaseosa":{
-            "500ml":{"Precio": 7},
-            "7500ml":{"Precio": 10}
-          }
         }
       }
     }
