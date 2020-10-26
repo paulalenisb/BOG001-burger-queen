@@ -1,30 +1,24 @@
 import React from 'react';
 import Data from '../../assets/data/menu.json';
 import '../../styles/Breakfast.css';
+/* import product from '../../assets/images/products/breakfast-jugo-frutas.png'; */
 
 export default function Breakfast () {
-  const ProductsNames = Object.keys(Data.menu.Desayuno.Producto);
-  const ProductProperties = Object.values(Data.menu.Desayuno.Producto);
-  console.log(ProductProperties)
-
   return(
     <div className= 'Product-container'>
-      {ProductsNames.map((product, index)=>(
-        <div className='Product-card'>
-          <h2 key={index} className="Product-title">{product}</h2>
-        </div>
-      ))}
-      {/* {ProductProperties.map((p, i) =>(
-        <div>
-          <img src={p.imagen} key ={i} alt="Product" className="Product-breakfast"/>
-          <h3 key={i}>{p.Precio}</h3>
-        </div>
-      ))} */}
+      {
+        //{names.filter(name => name.includes('J'))
+        Object.keys(Data.menu).filter(Bfast => Data.menu[Bfast].type.includes('Breakfast')).map((product, index)=>(
+          <div key = {index +"card"} className='Product-card'>
+            <h3 key={index +"price"} className="Product-price">${Data.menu[product].price}</h3>
+            <img src={Data.menu[product].image} key ={index +"image"} alt={product} className="Product-image"/>
+            <h2 key={index +"product"} className="Product-title">{product}</h2>
+          </div>
+        ))
+      }
+
+    {/* <img src={product} className='Home-logo' alt='Burguer Queeen Logo'/> */}
     </div>
   )
 }
 
-/* {Dishes.map((dish, index) => (
-  <li key={index}>{dish}</li>
-))}
- */
