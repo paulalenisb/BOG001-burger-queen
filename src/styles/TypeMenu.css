@@ -1,10 +1,10 @@
 .Type-menu {
-    width:90%;
+    width:85%;
+    height: 30px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     font-size: 1.3em;
     list-style-type: none;
+    margin: 0;
 }
 
 .Type-menu li {

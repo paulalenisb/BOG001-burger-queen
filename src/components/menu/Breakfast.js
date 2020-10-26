@@ -11,10 +11,15 @@ export default function Breakfast () {
     <div className= 'Product-container'>
       {ProductsNames.map((product, index)=>(
         <div className='Product-card'>
-          <h2 key={index}>{product}</h2>
-          {/* <h3 key = {index}>{product.Precio}</h3> */}
+          <h2 key={index} className="Product-title">{product}</h2>
         </div>
       ))}
+      {/* {ProductProperties.map((p, i) =>(
+        <div>
+          <img src={p.imagen} key ={i} alt="Product" className="Product-breakfast"/>
+          <h3 key={i}>{p.Precio}</h3>
+        </div>
+      ))} */}
     </div>
   )
 }
