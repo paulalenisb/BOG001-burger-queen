@@ -2,6 +2,9 @@ ul {
   padding: 0; /* Eliminar padding-left 40 */
 }
 
+.Waiter-section{
+  display: flex;
+}
 .Menu-section {
   width: 65%;
   position: fixed;
@@ -9,8 +12,13 @@ ul {
   bottom: 20px;
   left: 0;
   background-color: #F6F6F6;
-  display: flex;
   flex-direction: column;
   align-items: center; /* Horizontal*/
   justify-content: space-around;
+}
+
+.Order-section{
+  width: 35%;
+  /* display: flex;
+  justify-content: right; */
 }
