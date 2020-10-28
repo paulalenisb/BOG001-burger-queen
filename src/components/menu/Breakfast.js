@@ -1,6 +1,6 @@
 import React from 'react';
 import Data from '../../assets/data/menu.json';
-import '../../styles/Breakfast.css';
+import '../../styles/menu/Breakfast.css';
 /* import product from '../../assets/images/products/breakfast-jugo-frutas.png'; */
 
 export default function Breakfast () {

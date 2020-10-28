@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../assets/images/Logo-BQ2.png';
-import '../../styles/Home.css';
+import '../../styles/viewsCss/Home.css';
 
 export default function Home({history})  {
 

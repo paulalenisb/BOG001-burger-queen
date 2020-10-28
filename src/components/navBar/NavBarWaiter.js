@@ -1,8 +1,9 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import logo from '../../assets/images/Logo-BQ.png';
 import home from '../../assets/svg/Home.svg';
-import '../../styles/NavBarWaiter.css';
-import { useHistory } from 'react-router-dom';
+import '../../styles/navBar/NavBarWaiter.css';
+
 
 export default function NavBarWaiter() {
   let history = useHistory();

@@ -6,7 +6,7 @@ import ClientName from '../order/ClientName';
 import OrderResume from '../order/OrderResume';
 /* import LunchDinner from '../menu/LunchDinner'; */
 import Footer from '../navBar/Footer';
-import '../../styles/Waiter.css';
+import '../../styles/viewsCss/Waiter.css';
 
 
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../styles/TypeMenu.css';
+import '../../styles/menu/TypeMenu.css';
 //import { useHistory } from 'react-router-dom';
 
 
