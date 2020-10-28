@@ -4,13 +4,17 @@ ul {
 
 .Waiter-section{
   display: flex;
-}
-.Menu-section {
-  width: 65%;
+  background-color: aqua;
   position: fixed;
   top: 70px;
   bottom: 20px;
   left: 0;
+}
+
+.Menu-section {
+  display: flex;
+  width: 65%;
+  height: 100%;
   background-color: #F6F6F6;
   flex-direction: column;
   align-items: center; /* Horizontal*/
@@ -19,6 +23,7 @@ ul {
 
 .Order-section{
   width: 35%;
-  /* display: flex;
-  justify-content: right; */
+  display: flex;
+  flex-direction: column;
+
 }
