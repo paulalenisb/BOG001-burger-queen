@@ -3,28 +3,28 @@
     "Café americano":{
       "type": "Breakfast",
       "price": 5,
-      "image":"/static/media/breakfast-cafe-americano.9dfb93da.png"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fbreakfast-cafe-americano.png?alt=media&token=627e98ff-38d0-498a-9497-eeea977d83f0"
     },
     "Café con leche":{
       "type": "Breakfast",
       "price": 7,
-      "image": "/static/media/breakfast-cafe-leche.c95bcfd9.png"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fbreakfast-cafe-leche.png?alt=media&token=d5232d1c-06e4-40a3-bbe6-a4b5c2bcb3df"
     },
     "Sandwich jamón y queso":{
       "type": "Breakfast",
       "price": 10,
-      "image":"/static/media/breakfast-sandwich.206fb8d3.png"
+      "image":"https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fbreakfast-sandwich.png?alt=media&token=8a02f207-e6de-4503-88a0-fe32f846bc40"
     },
     "Jugo de frutas":{
       "type": "Breakfast",
       "price": 7,
-      "image":"/static/media/breakfast-jugo-frutas.8a2e831f.png"
+      "image":"https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fbreakfast-jugo-frutas.png?alt=media&token=619c1e9e-3d99-4d4c-ba44-a0bbdf4e589c"
     },
     "Hamburguesa sencilla":{
       "type": "Lunch-Dinner",
       "submenu":"Hamburgers",
       "price": 10,
-      "image": "alguna img",
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-hamburguesa-sencilla.png?alt=media&token=9531571e-dc36-434b-8f82-a8009127e6de",
       "meat" : ["Res", "Pollo", "Vegetariana"],
       "toppings":{
         "Queso":{"price": 1},
@@ -35,7 +35,7 @@
       "type": "Lunch-Dinner",
       "submenu":"Hamburgers",
       "price": 15,
-      "image": "alguna img",
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-hamburguesa-doble.png?alt=media&token=b6473493-8a51-4e61-bde7-344081f27a7c",
       "meat" : ["Res", "Pollo", "Vegetariana"],
       "toppings":{
         "Queso":{"price": 1},
@@ -46,37 +46,37 @@
       "type": "Lunch-Dinner",
       "submenu":"Acompañamientos",
       "price": 5,
-      "image": "alguna img"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-acomp-papas.png?alt=media&token=4f0c78b0-867f-4975-b0f5-3c65b839282f"
     },
     "Aros de cebolla":{
       "type": "Lunch-Dinner",
       "submenu":"Acompañamientos",
       "price": 5,
-      "image": "alguna img"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-acomp-aros.png?alt=media&token=9f27d5c1-c5e3-48b9-ba40-cec7c8f2e571"
     },
     "Agua 500ml":{
       "type": "Lunch-Dinner",
       "submenu":"Drinks",
       "price": 5,
-      "image": "alguna img"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-bebidas-agua.png?alt=media&token=e74c6a7a-02f5-435b-96ce-3a1fd5b57e9a"
     },
     "Agua 7500ml":{
       "type": "Lunch-Dinner",
       "submenu":"Drinks",
       "price": 7,
-      "image": "alguna img"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-bebidas-agua.png?alt=media&token=e74c6a7a-02f5-435b-96ce-3a1fd5b57e9a"
     },
     "Bebida/gasesosa 500ml":{
       "type": "Lunch-Dinner",
       "submenu":"Drinks",
       "price": 7,
-      "image": "alguna img"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-bebidas-gaseosa-coca.png?alt=media&token=c22c9f7f-735c-4d28-b8cb-7c76b34d59df"
     },
     "Bebida/gasesosa 7500ml":{
       "type": "Lunch-Dinner",
       "submenu":"Drinks",
       "price": 10,
-      "image": "alguna img"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-bebidas-gaseosa-vaso.png?alt=media&token=92928673-63f9-4f56-a9d7-032c43089220"
     }
   }
 }
