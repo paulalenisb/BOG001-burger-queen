@@ -1,4 +1,9 @@
 .Client-name{
-  display: flex;
-  color:  #E0052D;
+  color:#E0052D;
+}
+
+.Client-input{
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #FFCD05;
 }

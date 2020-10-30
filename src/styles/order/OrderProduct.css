@@ -1,0 +1,30 @@
+.Order-product{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  
+}
+
+.Order-quantity, .Order-price{
+  display: flex;
+  align-items: center;
+}
+
+.Btn-product{
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: solid 1px #E0052D;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+i{
+  color:#E0052D;
+}
+
+.Order-number{
+  margin: 10px;
+}

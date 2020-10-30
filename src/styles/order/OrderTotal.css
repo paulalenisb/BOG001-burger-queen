@@ -1,0 +1,16 @@
+.Order-total{
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  border-top: 2px solid #FFCD05;
+  border-bottom: 2px solid #FFCD05;
+
+}
+
+.Order-total-title{
+  color:#E0052D;
+}
+
+.Order-total-title, .Order-total-number{
+  margin: 7px 0;
+}
