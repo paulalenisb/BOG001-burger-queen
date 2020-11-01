@@ -3,11 +3,10 @@
     height: 30px;
     display: flex;
     font-size: 1.3em;
-    list-style-type: none;
     margin: 0;
 }
 
-.Type-menu li {
+.Type-menu button {
   width: 50%;
   height: 100%;
   text-align: center;
