@@ -64,7 +64,7 @@
       "price": 5,
       "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-bebidas-agua.png?alt=media&token=e74c6a7a-02f5-435b-96ce-3a1fd5b57e9a"
     },
-    "Agua 7500ml":{
+    "Agua 750ml":{
       "type": "Lunch-Dinner",
       "submenu":"Drinks",
       "price": 7,
@@ -76,7 +76,7 @@
       "price": 7,
       "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-bebidas-gaseosa-coca.png?alt=media&token=c22c9f7f-735c-4d28-b8cb-7c76b34d59df"
     },
-    "Bebida/gasesosa 7500ml":{
+    "Bebida/gasesosa 750ml":{
       "type": "Lunch-Dinner",
       "submenu":"Drinks",
       "price": 10,
