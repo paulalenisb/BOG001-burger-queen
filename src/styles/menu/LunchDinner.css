@@ -1,0 +1,24 @@
+.Lunch-container { /* NO VA EN ESTE CSS */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* background-color: greenyellow; */
+}
+
+.Lunch-submenu {
+  width: 85%;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Submenu-btn {
+  width: 30%;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  font-size: 1em;
+  color: #E0052D;
+  box-shadow:3px 3px 3px rgba(0, 0, 0, 0.2);
+}
