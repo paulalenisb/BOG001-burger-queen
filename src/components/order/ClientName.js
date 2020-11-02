@@ -6,7 +6,8 @@ export default function ClientName () {
     <div>
       <h3 className='Client-name'>Cliente:<input className='Client-input' type="text" name="nombre" required></input></h3>
     </div>
-
+    /* Hace falta label para accesibilidad, cambié el H3 */
+    /* <label className='Client-name'>Cliente:<input className='Client-input' type="text" name="nombre" required></input></label> */
   )
 }
 
