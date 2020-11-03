@@ -16,7 +16,7 @@ export default function NavBarWaiter() {
             <li className='Nav-waiter-item'onClick={() => { history.push("/"); }}>
               <img src={home} className='Nav-home-icon' alt='Icon Home'/>
             </li>
-            <li className='Nav-waiter-item'>Nuevo Pedido</li>
+            <li className='Nav-waiter-item'onClick={() => { history.push("/waiter"); }}>Nuevo Pedido</li>
             <li className='Nav-waiter-item'>Estado de pedido</li>
           </ul>
         </div>

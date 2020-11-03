@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import '../../styles/menu/Breakfast.css';
-//import Cards from './Cards.js'
-
+import '../../styles/menu/Cards.css';
 import '../../styles/menu/LunchDinner.css'
 
 export default function LunchDinner (props) {
@@ -17,7 +15,6 @@ export default function LunchDinner (props) {
       <div className='Products-container'>
         {
           Object.keys(props.data).filter(lunch => props.data[lunch].submenu.includes(subMenuType)).map((product, index)=>(
-            /* <Cards index = {index} data = {props} product= {product} /> */
           <div key={index + 'card'} className='Product-card'>
             <h3 key={index + 'price'} className='Product-price'>${props.data[product].price}</h3>
             <img src={props.data[product].image} key={index + 'image'} alt={product} className='Product-image'/>
