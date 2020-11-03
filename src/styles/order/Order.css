@@ -1,7 +1,14 @@
 .Order{
   width: 100%;
+  height: 80%;
   margin-top: 80px; /* NO DEBERÍA SER FIJO!*/
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.Order-bottom{
+  width: 90%;
+  margin-top: 290px;
+  
 }
