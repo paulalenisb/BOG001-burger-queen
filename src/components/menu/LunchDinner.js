@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../styles/menu/Cards.css';
-import '../../styles/menu/LunchDinner.css'
+import '../../styles/menu/LunchDinner.css';
+import Cards from '../menu/Cards';
 
 export default function LunchDinner (props) {
   const [subMenuType, setSubMenu] = useState('Hamburgers');
@@ -15,11 +16,7 @@ export default function LunchDinner (props) {
       <div className='Products-container'>
         {
           Object.keys(props.data).filter(lunch => props.data[lunch].submenu.includes(subMenuType)).map((product, index)=>(
-          <div key={index + 'card'} className='Product-card'>
-            <h3 key={index + 'price'} className='Product-price'>${props.data[product].price}</h3>
-            <img src={props.data[product].image} key={index + 'image'} alt={product} className='Product-image'/>
-            <h2 key={index + 'product'} className='Product-title'>{product}</h2>
-          </div>
+            <Cards  key={'cards' + index} data={props.data} product={product} index={index}/>
           ))
         }
       </div>
