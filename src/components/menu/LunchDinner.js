@@ -3,10 +3,10 @@ import '../../styles/menu/Cards.css';
 import '../../styles/menu/LunchDinner.css';
 import Cards from '../menu/Cards';
 
-export default function LunchDinner (props) {
-  const [subMenuType, setSubMenu] = useState('Hamburgers');
+export default function LunchDinner(props) {
+  const [subMenuType, setSubMenu] = useState('Hamburgers'); 
 
-  return(
+  return (
     <div className='Lunch-container'>
       <div className='Lunch-submenu'>
         <button className='Submenu-btn' value='Hamburgers' onClick={ (e) => setSubMenu(e.target.value)}>Hamburguesas</button>
@@ -16,7 +16,7 @@ export default function LunchDinner (props) {
       <div className='Products-container'>
         {
           Object.keys(props.data).filter(lunch => props.data[lunch].submenu.includes(subMenuType)).map((product, index)=>(
-            <Cards  key={'cards' + index} data={props.data} product={product} index={index}/>
+            <Cards key={'cards' + index} data={props.data} product={product} index={index} gato={props.gato}/>
           ))
         }
       </div>

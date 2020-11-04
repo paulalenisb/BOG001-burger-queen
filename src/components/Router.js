@@ -4,7 +4,6 @@ import Home from './views/Home';
 import Waiter from './views/Waiter';
 import NotFound from './views/NotFound';
 
-
 const Router = () => (
   <BrowserRouter>
     <Switch>

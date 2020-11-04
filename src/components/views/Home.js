@@ -3,8 +3,7 @@ import logo from '../../assets/images/Logo-BQ2.png';
 import '../../styles/viewsCss/Home.css';
 
 export default function Home({history})  {
-
-  return(
+  return (
     <div className='Home'>
         <img src={logo} className='Home-logo' alt='Burguer Queeen Logo'/>
         <div className='Home-btn-container'>

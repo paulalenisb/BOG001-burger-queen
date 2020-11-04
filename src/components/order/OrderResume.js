@@ -1,8 +1,7 @@
 import React from 'react';
 import '../../styles/order/OrderResume.css';
 
-
-export default function OrderResume () {
+export default function OrderResume() {
   return (
     <div className='Order-titles'>
       <h2 className='Order-resume'>Resumen de la orden</h2>
