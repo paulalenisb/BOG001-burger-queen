@@ -13,8 +13,10 @@ export default function Order () {
       <ClientName />
       <OrderResume />
       <OrderProduct />
+      <div className='Order-bottom'>
       <OrderTotal />
       <OrderBtn />
+      </div>
     </div>
   )
 }

@@ -1,7 +1,8 @@
 .Order-btn-container{
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-self: ;
 }
 
 .Cancel-order-btn, .Add-order-btn{
@@ -12,3 +13,9 @@
   font-size: 1.3em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3),
 }
+
+.Add-order-btn{
+  background-color: #E0052D;
+  color: aliceblue;
+}
+
