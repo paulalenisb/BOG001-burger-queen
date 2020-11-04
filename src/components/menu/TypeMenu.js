@@ -3,41 +3,39 @@ import Data from '../../assets/data/menu.json';
 import LunchDinner from '../menu/LunchDinner';
 import Cards from '../menu/Cards';
 import '../../styles/menu/TypeMenu.css';
-
+//import FinalOrder from '../views/Waiter'
 
 export default function TypeMenu () {
+
+  let objPrueba = []; 
+    
+    const facilonga = (product)=>{
+        objPrueba.push(product)  
+        console.log(objPrueba)
+    }
+
   const [foodType, setFoodType] = useState('Breakfast');
   //const[resumeState, setResumeState] = useState('');
+  return (
+    
+    <div className='Menu-section-container'>
+      {/* <FinalOrder.Provider value ={ objPrueba}/> */}
+    <div className='Type-menu'>
+      <button className='Menu-breakfast Menu-active' value= 'Breakfast' onClick={ (e) => setFoodType(e.target.value) }>Desayuno </button>
+      <button className='Menu-other' value ='Lunch' onClick={ (e) => setFoodType(e.target.value) }>Almuerzo/Cena</button>
+      {console.log(foodType)}
+    </div>
+  
 
-  if (foodType ==='Breakfast'){
-    return(
-      <div className='Menu-section-container'>
-        <div className='Type-menu'>
-          <button className='Menu-breakfast Menu-active' value={foodType} onClick={ (e) => setFoodType(e.target.value) }>Desayuno </button>
-          <button className='Menu-other' value ='Lunch' onClick={ (e) => setFoodType(e.target.value) }>Almuerzo/Cena</button>
-          {console.log(foodType)}
-        </div>
+  {foodType ==='Breakfast' && 
         <div className='Products-container'>
-
           {Object.keys(Data.menu).filter(lunch => Data.menu[lunch].type.includes(foodType)).map((product, index) => (
-            <Cards key={'cards' + index} data={Data.menu} product={product} index={index} onClick = { e => console.log(e) } />
+            <Cards key={'cards' + index} data={Data.menu} product={product} index={index} gato = {() => facilonga(product)}/>
           ))}
         </div>
-      </div>
-    )
-}
-  return(
-    <div className='Menu-section-container'>
-      <div className='Type-menu'>
-        <button className='Menu-breakfast' value ='Breakfast' onClick={ (e) => setFoodType(e.target.value) }>Desayuno</button>
-        <button className='Menu-other Menu-active' value = {foodType}  onClick={ (e) => setFoodType(e.target.value) }> Almuerzo/Cena </button>
-        {console.log(foodType)}
-    </div>
-    {/* {Object.keys(Data.menu).filter(lunch => Data.menu[lunch].type.includes(foodType)).map((product, index) => (
-            <Cards key={'cards' + index} data={Data.menu} product={product} index={index}/>
-
-          ))} */}
-    <LunchDinner data ={Data.menu}/>
-    </div>
-  )
+      
+  }{foodType !== 'Breakfast' && 
+  <LunchDinner data ={Data.menu}/>
+  }
+  </div>)
 }
