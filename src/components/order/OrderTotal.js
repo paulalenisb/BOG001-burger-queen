@@ -1,4 +1,5 @@
 import React from 'react';
+
 import '../../styles/order/OrderTotal.css';
 
 export default function OrderTotal() {

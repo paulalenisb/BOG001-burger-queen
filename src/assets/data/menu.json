@@ -2,31 +2,31 @@
   "menu":{
     "Café americano":{
       "type": "Breakfast",
-      "submenu":"none",
+      "submenu":"None",
       "price": 5,
       "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fbreakfast-cafe-americano.png?alt=media&token=627e98ff-38d0-498a-9497-eeea977d83f0"
     },
     "Café con leche":{
       "type": "Breakfast",
-      "submenu":"none",
+      "submenu":"None",
       "price": 7,
       "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fbreakfast-cafe-leche.png?alt=media&token=d5232d1c-06e4-40a3-bbe6-a4b5c2bcb3df"
     },
     "Sandwich jamón y queso":{
       "type": "Breakfast",
-      "submenu":"none",
+      "submenu":"None",
       "price": 10,
       "image":"https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fbreakfast-sandwich.png?alt=media&token=8a02f207-e6de-4503-88a0-fe32f846bc40"
     },
     "Jugo de frutas":{
       "type": "Breakfast",
-      "submenu":"none",
+      "submenu":"None",
       "price": 7,
       "image":"https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fbreakfast-jugo-frutas.png?alt=media&token=619c1e9e-3d99-4d4c-ba44-a0bbdf4e589c"
     },
     "Hamburguesa sencilla":{
       "type": "Lunch-Dinner",
-      "submenu":"Hamburgers",
+      "submenu":"Burgers",
       "price": 10,
       "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-hamburguesa-sencilla.png?alt=media&token=9531571e-dc36-434b-8f82-a8009127e6de",
       "meat" : ["Res", "Pollo", "Vegetariana"],
@@ -37,7 +37,7 @@
     },
     "Hamburguesa doble":{
       "type": "Lunch-Dinner",
-      "submenu":"Hamburgers",
+      "submenu":"Burgers",
       "price": 15,
       "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-hamburguesa-doble.png?alt=media&token=b6473493-8a51-4e61-bde7-344081f27a7c",
       "meat" : ["Res", "Pollo", "Vegetariana"],
@@ -48,13 +48,13 @@
     },
     "Papas fritas":{
       "type": "Lunch-Dinner",
-      "submenu":"Acompañamientos",
+      "submenu":"Side-Orders",
       "price": 5,
       "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-acomp-papas.png?alt=media&token=4f0c78b0-867f-4975-b0f5-3c65b839282f"
     },
     "Aros de cebolla":{
       "type": "Lunch-Dinner",
-      "submenu":"Acompañamientos",
+      "submenu":"Side-Orders",
       "price": 5,
       "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-acomp-aros.png?alt=media&token=9f27d5c1-c5e3-48b9-ba40-cec7c8f2e571"
     },

@@ -1,15 +1,16 @@
 import React from 'react';
-import logo from '../../assets/images/Logo-BQ2.png';
+
+import Logo from '../../assets/images/Logo-BQ2.png';
 import '../../styles/viewsCss/Home.css';
 
-export default function Home({history})  {
+export default function Home({ history })  {
   return (
     <div className='Home'>
-        <img src={logo} className='Home-logo' alt='Burguer Queeen Logo'/>
-        <div className='Home-btn-container'>
-          <button className='Home-btn' onClick = {() => { history.push('/waiter') }}>Mesero</button>
-          <button className='Home-btn'>Jefe de cocina</button>
-        </div>
+      <img src={Logo} className='Home-logo' alt='Burguer Queeen Logo'/>
+      <div className='Home-btn-container'>
+        <button className='Home-btn' onClick= {() => { history.push('/waiter') }}>Mesero</button>
+        <button className='Home-btn'>Jefe de cocina</button>
+      </div>
     </div>
   )
 }

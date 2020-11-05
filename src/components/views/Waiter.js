@@ -3,6 +3,7 @@ import NavWaiter from '../navBar/NavBarWaiter';
 import TypeMenu from '../menu/TypeMenu';
 import Footer from '../navBar/Footer';
 
+// Components section order
 import ClientName from '../order/ClientName';
 import OrderResume from '../order/OrderResume.js';
 import OrderProduct from '../order/OrderProduct.js';
@@ -11,19 +12,18 @@ import OrderBtn from '../order/OrderBtn.js';
 
 import '../../styles/viewsCss/Waiter.css';
 import '../../styles/order/Order.css';
-//import OrderProduct from '../order/OrderProduct';
 
 /* const FinalOrder = React.createContext({
-  cliente : "",
+  cliente : '',
   product: []
 }); */
 
 export default function Waiter() {
-  //let objPrueba = []; 
+  //let objPrueba = [];
 
   /* const facilonga = (product)=>{
-      objPrueba.push(product)  
-      console.log(objPrueba)
+    objPrueba.push(product)
+    console.log(objPrueba)
   } */
   //const [resumeOrder, setResumeOrder] = useContext(finalOrder)
 
