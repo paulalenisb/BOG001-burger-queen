@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 import Data from '../../assets/data/menu.json';
 import Cards from '../menu/Cards';
-import LunchDinner from '../menu/LunchDinner';
+//import LunchDinner from '../menu/LunchDinner';
 
 import '../../styles/menu/TypeMenu.css';
+//import OrderResume from '../order/OrderResume';
 
-export default function TypeMenu() {
-  let objPrueba = [];
+export default function TypeMenu(props) {
 
-  const facilonga = (product) => {
-    objPrueba.push(product)
-    console.log(objPrueba)
+    const facilonga = (product) => {
+    props.order.push(product)
+    console.log(props.order)
   }
 
   const [foodType, setFoodType] = useState('Breakfast');
+  const [submenu, setSubmenu] = useState('None')
 
   //const[resumeState, setResumeState] = useState('');
   return (
@@ -25,14 +26,20 @@ export default function TypeMenu() {
         {console.log(foodType)}
       </div>
 
-      {foodType === 'Breakfast' &&
+      {submenu === 'None' &&
         <div className='Products-container'>
           {Object.keys(Data.menu).filter(lunch => Data.menu[lunch].type.includes(foodType)).map((product, index) => (
             <Cards key={'cards' + index} data={Data.menu} product={product} index={index} gato = {() => facilonga(product)}/>
           ))}
         </div>
-      }{foodType !== 'Breakfast' &&
-        <LunchDinner data ={Data.menu} gato={facilonga()}/>
+
+        //refactorizar lunch <cards></cards>
+      }{submenu !== 'None' &&
+      <div>
+        <button className='Submenu-btn' value='Burgers' onClick={(e) => setSubmenu(e.target.value)}>Hamburguesas</button>
+        {/* <LunchDinner data ={Data.menu} gato={facilonga()}/> */}
+      </div>
+      
       }
     </div>
   )

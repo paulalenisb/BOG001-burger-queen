@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavWaiter from '../navBar/NavBarWaiter';
 import TypeMenu from '../menu/TypeMenu';
 import Footer from '../navBar/Footer';
@@ -13,33 +13,33 @@ import OrderBtn from '../order/OrderBtn.js';
 import '../../styles/viewsCss/Waiter.css';
 import '../../styles/order/Order.css';
 
-/* const FinalOrder = React.createContext({
-  cliente : '',
-  product: []
-}); */
 
 export default function Waiter() {
-  //let objPrueba = [];
 
-  /* const facilonga = (product)=>{
-    objPrueba.push(product)
-    console.log(objPrueba)
-  } */
-  //const [resumeOrder, setResumeOrder] = useContext(finalOrder)
+  const [orderResume, setOrderResume] = useState([]);
+  const [borrar, setDelete]= useState('algo')
+
+  const handleDelete =()=>{
+    setDelete('')
+    console.log('DebeBorrar')
+  }
+
+
+
 
   return (
     <div className='Waiter'>
       <NavWaiter />
       <div className='Waiter-section'>
         <section className='Menu-section'>
-          <TypeMenu /* provider = cards */ />
+          <TypeMenu order ={orderResume}  handleOrder={setOrderResume}/* provider = objeto cards con el producto */ />
         </section>
         <section className='Order-section'>
           <div className='Order'>
             {/* <FinalOrder.Consumer> */}
             <ClientName />
             <OrderResume />
-            <OrderProduct  /* order = {{resumeOrder}} *//>
+            <OrderProduct name={borrar} handleClick={handleDelete}/* order = {{resumeOrder}} *//>
             <div className='Order-bottom'>
               <OrderTotal />
               <OrderBtn />
