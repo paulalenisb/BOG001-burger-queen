@@ -13,7 +13,7 @@ import OrderBtn from '../order/OrderBtn.js';
 import '../../styles/viewsCss/Waiter.css';
 import '../../styles/order/Order.css';
 
-
+//Cambiar nombre nuevo Pedido
 export default function Waiter() {
 
   const [orderResume, setOrderResume] = useState([]);
@@ -23,9 +23,7 @@ export default function Waiter() {
     setDelete('')
     console.log('DebeBorrar')
   }
-
-
-
+  
 
   return (
     <div className='Waiter'>

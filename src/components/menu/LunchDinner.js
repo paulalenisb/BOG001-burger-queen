@@ -17,7 +17,7 @@ export default function LunchDinner(props) {
       <div className='Products-container'>
         {
           Object.keys(props.data).filter(lunch => props.data[lunch].submenu.includes(subMenuType)).map((product, index) => (
-            <Cards key={'cards' + index} data={props.data} product={product} index={index} gato={props.gato}/>
+            <Cards key={'cards' + index} data={props.data} product={product} index={index} order={props.order}/>
           ))
         }
       </div>
