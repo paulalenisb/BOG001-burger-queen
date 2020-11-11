@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NavWaiter from '../navBar/NavBarWaiter';
 import TypeMenu from '../menu/TypeMenu';
 import Footer from '../navBar/Footer';
+import Data from '../../assets/data/menu.json';
 
 // Components section order
 import ClientName from '../order/ClientName';
@@ -17,27 +18,33 @@ import '../../styles/order/Order.css';
 export default function Waiter() {
 
   const [orderResume, setOrderResume] = useState([]);
-  const [borrar, setDelete]= useState('algo')
+  //const [borrar, setDelete]= useState()
 
-  const handleDelete =()=>{
-    setDelete('')
+/*  const handleDelete =()=>{
+    setDelete()
     console.log('DebeBorrar')
+  } */
+
+  const changeState =(products)=>{
+    setOrderResume(products)
+    return orderResume
   }
-  
 
   return (
     <div className='Waiter'>
       <NavWaiter />
+
       <div className='Waiter-section'>
         <section className='Menu-section'>
-          <TypeMenu order ={orderResume}  handleOrder={setOrderResume}/* provider = objeto cards con el producto */ />
+          <TypeMenu data={Data.menu} order={orderResume} handleOrder={changeState} />
         </section>
+
         <section className='Order-section'>
           <div className='Order'>
-            {/* <FinalOrder.Consumer> */}
             <ClientName />
             <OrderResume />
-            <OrderProduct name={borrar} handleClick={handleDelete}/* order = {{resumeOrder}} *//>
+            <OrderProduct order={orderResume}/>
+
             <div className='Order-bottom'>
               <OrderTotal />
               <OrderBtn />
@@ -45,12 +52,8 @@ export default function Waiter() {
           </div>
         </section>
       </div>
+
       <Footer />
     </div>
   )
 }
-
-/* export default {
-  Waiter,
-  FinalOrder
-} */
