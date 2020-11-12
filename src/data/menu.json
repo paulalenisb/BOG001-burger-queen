@@ -4,7 +4,7 @@
       "type": "Breakfast",
       "submenu":"",
       "price": 5,
-      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fproducts%2Fbreakfast-cafe-americano-min.png?alt=media&token=ea7eb5ab-7d10-4163-87cc-27f083f970f2"
+      "image": "products/breakfast-cafe-americano.png"
     },
     "Café con leche":{
       "type": "Breakfast",

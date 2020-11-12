@@ -9,6 +9,8 @@ export default function ClientName() {
         <input className='Client-input' type='text' name='nombre' required></input>
       </label>
     </div>
+
+    
   )
 }
 
