@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import NavWaiter from '../navBar/NavBarWaiter';
 import TypeMenu from '../menu/TypeMenu';
 import Footer from '../navBar/Footer';
-import Data from '../../data/menu.json';
+import Data from '../../assets/data/menu.json';
 
 // Components section order
 import ClientName from '../order/ClientName';
@@ -32,7 +32,7 @@ export default function Waiter() {
           <div className='Order'>
             <ClientName />
             <OrderResume />
-            <OrderProduct order={order} setOrder ={setOrder}/>
+            <OrderProduct order={order} setOrder={setOrder} />
 
             <div className='Order-bottom'>
               <OrderTotal />

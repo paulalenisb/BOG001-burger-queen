@@ -54,7 +54,7 @@ export default function TypeMenu({data, order, setOrder}) {
             data={data}
             product={product}
             index={index}
-            order ={() => setOrder([...order, product])}
+            order={() => setOrder([...order, product])}
           />
           ))
         }
