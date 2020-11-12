@@ -4,31 +4,31 @@
       "type": "Breakfast",
       "submenu":"",
       "price": 5,
-      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fbreakfast-cafe-americano.png?alt=media&token=627e98ff-38d0-498a-9497-eeea977d83f0"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fproducts%2Fbreakfast-cafe-americano-min.png?alt=media&token=ea7eb5ab-7d10-4163-87cc-27f083f970f2"
     },
     "Café con leche":{
       "type": "Breakfast",
       "submenu":"",
       "price": 7,
-      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fbreakfast-cafe-leche.png?alt=media&token=d5232d1c-06e4-40a3-bbe6-a4b5c2bcb3df"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fproducts%2Fbreakfast-cafe-leche-min.png?alt=media&token=36db187e-4a48-4553-8f88-ed925702935d"
     },
     "Sandwich jamón y queso":{
       "type": "Breakfast",
       "submenu":"",
       "price": 10,
-      "image":"https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fbreakfast-sandwich.png?alt=media&token=8a02f207-e6de-4503-88a0-fe32f846bc40"
+      "image":"https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fproducts%2Fbreakfast-sandwich-min.png?alt=media&token=8a4da089-e38a-43cd-a6c7-bb4bf7738c2a"
     },
     "Jugo de frutas":{
       "type": "Breakfast",
       "submenu":"",
       "price": 7,
-      "image":"https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fbreakfast-jugo-frutas.png?alt=media&token=619c1e9e-3d99-4d4c-ba44-a0bbdf4e589c"
+      "image":"https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fproducts%2Fbreakfast-jugo-frutas-min.png?alt=media&token=8506856d-ed04-42fb-b2d9-b48501b090f1"
     },
     "Hamburguesa sencilla":{
       "type": "Lunch-Dinner",
       "submenu":"Burgers",
       "price": 10,
-      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-hamburguesa-sencilla.png?alt=media&token=9531571e-dc36-434b-8f82-a8009127e6de",
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fproducts%2Flunch-hamburguesa-sencilla-min.png?alt=media&token=c4960bec-f868-4356-8e76-996ce9d3b5ee",
       "meat" : ["Res", "Pollo", "Vegetariana"],
       "toppings":{
         "Queso":{"price": 1},
@@ -39,7 +39,7 @@
       "type": "Lunch-Dinner",
       "submenu":"Burgers",
       "price": 15,
-      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-hamburguesa-doble.png?alt=media&token=b6473493-8a51-4e61-bde7-344081f27a7c",
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fproducts%2Flunch-hamburguesa-doble-min.png?alt=media&token=64dd10fb-7a81-4dd2-a03c-1f6927038e57",
       "meat" : ["Res", "Pollo", "Vegetariana"],
       "toppings":{
         "Queso":{"price": 1},
@@ -50,37 +50,37 @@
       "type": "Lunch-Dinner",
       "submenu":"Side-Orders",
       "price": 5,
-      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-acomp-papas.png?alt=media&token=4f0c78b0-867f-4975-b0f5-3c65b839282f"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fproducts%2Flunch-acomp-papas-min.png?alt=media&token=9fffca6a-4e1c-4b7c-8737-b5846838e026"
     },
     "Aros de cebolla":{
       "type": "Lunch-Dinner",
       "submenu":"Side-Orders",
       "price": 5,
-      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-acomp-aros.png?alt=media&token=9f27d5c1-c5e3-48b9-ba40-cec7c8f2e571"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fproducts%2Flunch-acomp-aros-min.png?alt=media&token=ace9699e-e3f5-454d-b290-2d4412d4f998"
     },
     "Agua 500ml":{
       "type": "Lunch-Dinner",
       "submenu":"Drinks",
       "price": 5,
-      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-bebidas-agua.png?alt=media&token=e74c6a7a-02f5-435b-96ce-3a1fd5b57e9a"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fproducts%2Flunch-bebidas-agua-min.png?alt=media&token=8236729a-df83-40d2-bfb2-1cf6ec2da1d1"
     },
     "Agua 750ml":{
       "type": "Lunch-Dinner",
       "submenu":"Drinks",
       "price": 7,
-      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-bebidas-agua.png?alt=media&token=e74c6a7a-02f5-435b-96ce-3a1fd5b57e9a"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fproducts%2Flunch-bebidas-agua-min.png?alt=media&token=8236729a-df83-40d2-bfb2-1cf6ec2da1d1"
     },
     "Bebida/gasesosa 500ml":{
       "type": "Lunch-Dinner",
       "submenu":"Drinks",
       "price": 7,
-      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-bebidas-gaseosa-coca.png?alt=media&token=c22c9f7f-735c-4d28-b8cb-7c76b34d59df"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fproducts%2Flunch-bebidas-gaseosa-coca-min.png?alt=media&token=3151ea5d-0324-4f2f-9deb-85a113473f77"
     },
     "Bebida/gasesosa 750ml":{
       "type": "Lunch-Dinner",
       "submenu":"Drinks",
       "price": 10,
-      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Flunch-bebidas-gaseosa-vaso.png?alt=media&token=92928673-63f9-4f56-a9d7-032c43089220"
+      "image": "https://firebasestorage.googleapis.com/v0/b/burguerqueen11.appspot.com/o/assets%2Fimages%2Fproducts%2Flunch-bebidas-gaseosa-vaso-min.png?alt=media&token=2ad223c2-12eb-47d4-aeb7-d4b0c11040f0"
     }
   }
 }
