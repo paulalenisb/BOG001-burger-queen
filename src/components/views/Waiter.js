@@ -25,7 +25,12 @@ export default function Waiter() {
     console.log('DebeBorrar')
   } */
 
-  const changeState =(products)=>{
+  /* const deleteProduct = (id) => {
+    const filtered = bill.filter((el) => el.id !== id);
+    setBill(filtered);
+  ; */
+
+  const changeState = (products) => {
     setOrderResume(products)
     return orderResume
   }

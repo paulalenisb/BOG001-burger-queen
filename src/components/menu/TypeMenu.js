@@ -10,8 +10,14 @@ export default function TypeMenu(props) {
   }
 
   const subMenuLunch = ['Burgers', 'Side-Orders','Drinks']
+
   const [foodType, setFoodType] = useState('Breakfast');
   const [subMenu, setSubMenu] = useState('')
+
+  const changeMenu = (e) => {
+    setFoodType(e.target.value)
+    setSubMenu('')
+  }
 
   const menu = Object.keys(props.data).filter((type => {
     if (props.data[type].type.includes(foodType)){
@@ -27,14 +33,14 @@ export default function TypeMenu(props) {
     <div className='Menu-section-container'>
 
       <div className='Type-menu'>
-        <button className='Menu-breakfast Menu-active' 
-        value='Breakfast' 
-        onClick={(e) => setFoodType(e.target.value) && setSubMenu('')}
+        <button className='Menu-breakfast Menu-active'
+        value='Breakfast'
+        onClick={(e) => changeMenu(e)}
         >Desayuno</button>
 
-        <button 
-        className='Menu-other' 
-        value='Lunch' 
+        <button
+        className='Menu-other'
+        value='Lunch'
         onClick={(e) => setFoodType(e.target.value)}
         >Almuerzo/Cena</button>
       </div>
@@ -44,19 +50,20 @@ export default function TypeMenu(props) {
         foodType === 'Lunch' ?
         subMenuLunch.map((product, index) => (
           <button key={'button' + index}
-            className='Submenu-btn' 
+            className='Submenu-btn'
             value={product}
             onClick={(e) => setSubMenu(e.target.value)}
           >{product}</button>
           ))
-        : null 
+        : null
         }
-        {         
+
+        {
         menu.map((product, index) => (
-          <Cards key={'cards' + index} 
-            data={props.data} 
-            product={product} 
-            index={index} 
+          <Cards key={'cards' + index}
+            data={props.data}
+            product={product}
+            index={index}
             order ={() => orderPush(product)}
           />
           ))
