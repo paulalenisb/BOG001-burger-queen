@@ -1,47 +1,64 @@
 import React, { useState } from 'react';
-import Data from '../../assets/data/menu.json';
 import Cards from '../menu/Cards';
-
 import '../../styles/menu/TypeMenu.css';
 
-export default function TypeMenu(props) {
+export default function TypeMenu({data, order, setOrder}) {
 
-  const orderPush = (product) => {
-    props.order.push(product)
-    console.log(props.order)
-  }
+  const subMenuLunch = ['Burgers', 'Side-Orders','Drinks']
 
   const [foodType, setFoodType] = useState('Breakfast');
- //const [subMenu, setSubMenu] = useState(['Burger', 'Side-order','Drinks'])
+  const [subMenu, setSubMenu] = useState('Burgers')
+
+  const menu = Object.keys(data).filter((productKey => {
+    if (foodType !== data[productKey].type){
+      return false // W/out type & submenu
+    }
+    if (foodType === 'Breakfast'){
+      return true // Arr Breakfast
+    }
+    return data[productKey].submenu === subMenu // Arr Lunch
+  }))
 
   return (
     <div className='Menu-section-container'>
-      {/* <FinalOrder.Provider value ={ objPrueba}/> */}
+
       <div className='Type-menu'>
-        <button className='Menu-breakfast Menu-active' value='Breakfast' onClick={(e) => setFoodType(e.target.value)}>Desayuno</button>
-        <button className='Menu-other' value='Lunch' onClick={(e) => setFoodType(e.target.value)}>Almuerzo/Cena</button>
-        {console.log(foodType)}
+        <button className='Menu-breakfast Menu-active'
+        value='Breakfast'
+        onClick={(e) => setFoodType(e.target.value) }
+        >Desayuno</button>
+
+        <button
+        className='Menu-other'
+        value='Lunch-Dinner'
+        onClick={(e) => setFoodType(e.target.value)}
+        >Almuerzo/Cena</button>
       </div>
 
       <div className='Products-container'>
-        {/* Botones lunch */}
-        {/* subMenu.map((product, index) => (
+        {
+        foodType === 'Lunch-Dinner' ?
+        subMenuLunch.map((product, index) => (
           <button key={'button' + index}
-            className='Submenu-btn' 
+            className='Submenu-btn'
             value={product}
             onClick={(e) => setSubMenu(e.target.value)}
-            >{product}</button>
-            )) */}
-        { 
-        Object.keys(Data.menu).filter(lunch => Data.menu[lunch].type.includes(foodType)).map((product, index) => (
-            <Cards key={'cards' + index} 
-            data={Data.menu} 
-            product={product} 
-            index={index} 
-            orderR={() => orderPush(product)}
-            />
-          ))}
-        </div>
+          >{product}</button>
+          ))
+        : null
+        }
+
+        {
+        menu.map((product, index) => (
+          <Cards key={'cards' + index}
+            data={data}
+            product={product}
+            index={index}
+            order={() => setOrder([...order, product])}
+          />
+          ))
+        }
+      </div>
     </div>
   )
 }
