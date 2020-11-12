@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import NavWaiter from '../navBar/NavBarWaiter';
 import TypeMenu from '../menu/TypeMenu';
 import Footer from '../navBar/Footer';
-import Data from '../../assets/data/menu.json';
+import Data from '../../data/menu.json';
 
 // Components section order
 import ClientName from '../order/ClientName';
@@ -17,18 +17,8 @@ import '../../styles/order/Order.css';
 //Cambiar nombre nuevo Pedido
 export default function Waiter() {
 
-  const [orderResume, setOrderResume] = useState([]);
-  //const [borrar, setDelete]= useState()
-
-/*  const handleDelete =()=>{
-    setDelete()
-    console.log('DebeBorrar')
-  } */
-
-  const changeState =(products)=>{
-    setOrderResume(products)
-    return orderResume
-  }
+  const [order, setOrder] = useState([]);
+  
 
   return (
     <div className='Waiter'>
@@ -36,14 +26,14 @@ export default function Waiter() {
 
       <div className='Waiter-section'>
         <section className='Menu-section'>
-          <TypeMenu data={Data.menu} order={orderResume} handleOrder={changeState} />
+          <TypeMenu data={Data.menu} order={order} setOrder={setOrder} />
         </section>
 
         <section className='Order-section'>
           <div className='Order'>
             <ClientName />
             <OrderResume />
-            <OrderProduct order={orderResume}/>
+            <OrderProduct order={order} setOrder ={setOrder}/>
 
             <div className='Order-bottom'>
               <OrderTotal />

@@ -1,26 +1,22 @@
 import React, { useState } from 'react';
 import Cards from '../menu/Cards';
-
 import '../../styles/menu/TypeMenu.css';
 
-export default function TypeMenu(props) {
 
-  const orderPush = (product) => {
-    props.handleOrder([...props.order, product])
-  }
+export default function TypeMenu({data, order, setOrder}) {
 
   const subMenuLunch = ['Burgers', 'Side-Orders','Drinks']
   const [foodType, setFoodType] = useState('Breakfast');
-  const [subMenu, setSubMenu] = useState('')
+  const [subMenu, setSubMenu] = useState('Burgers')
 
-  const menu = Object.keys(props.data).filter((type => {
-    if (props.data[type].type.includes(foodType)){
-      if (subMenu !== ''){
-        return props.data[type].submenu.includes(subMenu) // Arr Lunch
-      }
+  const menu = Object.keys(data).filter((productKey => {
+    if (foodType !== data[productKey].type){
+      return false // W/out type & submenu
+    }
+    if (foodType === 'Breakfast'){
       return true // Arr Breakfast
     }
-    return false // W/out type & submenu
+    return data[productKey].submenu === subMenu // Arr Lunch
   }))
 
   return (
@@ -34,14 +30,14 @@ export default function TypeMenu(props) {
 
         <button 
         className='Menu-other' 
-        value='Lunch' 
-        onClick={(e) => setFoodType(e.target.value)}
+        value='Lunch-Dinner' 
+        onClick={(e) => setFoodType(e.target.value)&& setSubMenu('')}
         >Almuerzo/Cena</button>
       </div>
 
       <div className='Products-container'>
         {
-        foodType === 'Lunch' ?
+        foodType === 'Lunch-Dinner' ?
         subMenuLunch.map((product, index) => (
           <button key={'button' + index}
             className='Submenu-btn' 
@@ -54,10 +50,10 @@ export default function TypeMenu(props) {
         {         
         menu.map((product, index) => (
           <Cards key={'cards' + index} 
-            data={props.data} 
+            data={data} 
             product={product} 
             index={index} 
-            order ={() => orderPush(product)}
+            order ={() => setOrder([...order, product])}
           />
           ))
         }
