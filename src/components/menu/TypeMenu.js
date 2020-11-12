@@ -25,13 +25,13 @@ export default function TypeMenu({data, order, setOrder}) {
       <div className='Type-menu'>
         <button className='Menu-breakfast Menu-active' 
         value='Breakfast' 
-        onClick={(e) => setFoodType(e.target.value) && setSubMenu('')}
+        onClick={(e) => setFoodType(e.target.value) }
         >Desayuno</button>
 
         <button 
         className='Menu-other' 
         value='Lunch-Dinner' 
-        onClick={(e) => setFoodType(e.target.value)&& setSubMenu('')}
+        onClick={(e) => setFoodType(e.target.value)}
         >Almuerzo/Cena</button>
       </div>
 

@@ -4,7 +4,7 @@
       "type": "Breakfast",
       "submenu":"",
       "price": 5,
-      "image": "assets/images/products/breakfast-cafe-americano.png"
+      "image": "products/breakfast-cafe-americano.png"
     },
     "Café con leche":{
       "type": "Breakfast",
