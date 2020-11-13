@@ -18,6 +18,14 @@ import '../../styles/order/Order.css';
 export default function Waiter() {
 
   const [order, setOrder] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  /* const objOrder = {
+    client: 'setClientName',
+    products: order[{product: juguito, quantity: 2, price: 14},],
+    total: setTotalPrice,
+    createdAt: Date.now()
+  } */
 
   return (
     <div className='Waiter'>
@@ -32,10 +40,15 @@ export default function Waiter() {
           <div className='Order'>
             <ClientName />
             <OrderResume />
-            <OrderProduct order={order} setOrder={setOrder} />
+            <OrderProduct
+            data={Data.menu}
+            order={order}
+            setOrder={setOrder}
+            totalPrice={totalPrice}
+            setTotalPrice={setTotalPrice} />
 
             <div className='Order-bottom'>
-              <OrderTotal />
+              <OrderTotal totalPrice={totalPrice} />
               <OrderBtn />
             </div>
           </div>
