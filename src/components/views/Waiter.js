@@ -29,7 +29,7 @@ export default function Waiter() {
         <section className='Menu-section'>
           <TypeMenu data={Data.menu} order={order} setOrder={setOrder} />
         </section>
-        
+
         <section className='Order-section'>
           <div className='Order'>
             <ClientName />
