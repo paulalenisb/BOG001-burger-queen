@@ -31,8 +31,8 @@
       "image": "assets/products/lunch-hamburguesa-sencilla-min.png",
       "meat" : ["Res", "Pollo", "Vegetariana"],
       "toppings":{
-        "Queso":{"price": 1},
-        "Huevo":{"price": 1}
+        "Queso": 1,
+        "Huevo": 1
       }
     },
     "Hamburguesa doble":{
@@ -42,8 +42,8 @@
       "image": "assets/products/lunch-hamburguesa-doble-min.png",
       "meat" : ["Res", "Pollo", "Vegetariana"],
       "toppings":{
-        "Queso":{"price": 1},
-        "Huevo":{"price": 1}
+        "Queso": 1,
+        "Huevo": 1
       }
     },
     "Papas fritas":{

@@ -4,7 +4,8 @@ import BurgerModal from '../menu/BurgerModal';
 import '../../styles/menu/LunchDinner.css';
 import '../../styles/menu/Cards.css';
 
-export default function Cards({index, order, data, product}) {
+export default function Cards({ index, setOrder, data, product, subMenu, foodType, setMeat }) {
+
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {setShowModal(prev => !prev);}
@@ -13,7 +14,7 @@ export default function Cards({index, order, data, product}) {
     <div
       key={index + 'card'}
       className='Product-card'
-      onClick={order}>
+      >
 
       <h3 className='Product-price'>
         ${data[product].price}
@@ -22,17 +23,28 @@ export default function Cards({index, order, data, product}) {
         src={data[product].image}
         alt={product}
         className='Product-image'/>
-
       <h2 className='Product-title'>
         {product}
       </h2>
-      <button onClick={openModal}>Opciones</button>
-        <BurgerModal
-          showModal={showModal}
-          setShowModal={setShowModal}
-          data={data}
-          product={product}/>
-    
+
+      { subMenu === 'Burgers' && foodType === 'Lunch-Dinner' ? (
+        <>
+          <button onClick={openModal}>Opciones</button>
+            <BurgerModal
+              showModal={showModal}
+              setShowModal={setShowModal}
+              data={data}
+              product={product}
+              setOrder={setOrder}
+              setMeat={setMeat}/>
+        </>
+      ): (
+        <>
+        <button onClick={setOrder}>
+            Agregar
+        </button>
+        </>
+      )}
     </div>
   )
 }

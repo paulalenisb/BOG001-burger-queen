@@ -16,8 +16,6 @@ import '../../styles/order/Order.css';
 
 //Cambiar nombre nuevo Pedido
 export default function Waiter() {
-
-
   const [order, setOrder] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -28,26 +26,34 @@ export default function Waiter() {
     createdAt: Date.now()
   } */
 
-
   return (
     <div className='Waiter'>
       <NavWaiter />
 
       <div className='Waiter-section'>
         <section className='Menu-section'>
-          <TypeMenu data={Data.menu} order={order} setOrder={setOrder} />
+          <TypeMenu
+            data={Data.menu}
+            order={order}
+            setOrder={setOrder} />
         </section>
 
         <section className='Order-section'>
           <div className='Order'>
             <ClientName />
             <OrderResume />
-            <OrderProduct
-            data={Data.menu}
-            order={order}
-            setOrder={setOrder}
-            totalPrice={totalPrice}
-            setTotalPrice={setTotalPrice} />
+
+            {order.map((product, index) => (
+              <OrderProduct
+                key={index + 'orderProduct'}
+                product={product}
+                index={index}
+                data={Data.menu}
+                order={order}
+                setOrder={setOrder}
+                totalPrice={totalPrice}
+                setTotalPrice={setTotalPrice} />
+            ))}
 
             <div className='Order-bottom'>
               <OrderTotal totalPrice={totalPrice} />

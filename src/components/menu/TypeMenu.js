@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import Cards from '../menu/Cards';
+
 import '../../styles/menu/TypeMenu.css';
 
-export default function TypeMenu({ data, order, setOrder }) {
+export default function TypeMenu({ data, order, setOrder}) {
 
   const subMenuLunch = ['Burgers', 'Side-Orders','Drinks']
 
   const [foodType, setFoodType] = useState('Breakfast');
-  const [subMenu, setSubMenu] = useState('Burgers')
+  const [subMenu, setSubMenu] = useState('Burgers');
+  const [meatX, setMeat] = useState('');
 
   const menu = Object.keys(data).filter((productKey => {
     if (foodType !== data[productKey].type){
@@ -63,7 +65,10 @@ export default function TypeMenu({ data, order, setOrder }) {
             data={data}
             product={product}
             index={index}
-            order={() => setOrder([...order, product])}
+            subMenu= {subMenu}
+            foodType={foodType}
+            setMeat ={setMeat}
+            setOrder={() => setOrder([...order, product])}
           />
           ))
         }
