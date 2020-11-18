@@ -9,7 +9,7 @@ export default function Home({ history })  {
       <img src={Logo} className='Home-logo' alt='Burguer Queeen Logo'/>
       <div className='Home-btn-container'>
         <button className='Home-btn' onClick= {() => { history.push('/waiter') }}>Mesero</button>
-        <button className='Home-btn'>Jefe de cocina</button>
+        <button className='Home-btn' onClick= {() => { history.push('/kitchen') }}>Jefe de cocina</button>
       </div>
     </div>
   )

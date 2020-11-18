@@ -10,7 +10,6 @@ import OrderResume from '../order/OrderResume.js';
 import OrderProduct from '../order/OrderProduct.js';
 import OrderTotal from '../order/OrderTotal.js';
 import OrderBtn from '../order/OrderBtn.js';
-import BurgerModal from '../menu/BurgerModal.js';
 
 import '../../styles/viewsCss/Waiter.css';
 import '../../styles/order/Order.css';
@@ -56,9 +55,7 @@ export default function Waiter() {
             </div>
           </div>
         </section>
-        <section className='Burger-modal'></section>
       </div>
-
       <Footer />
     </div>
   )
