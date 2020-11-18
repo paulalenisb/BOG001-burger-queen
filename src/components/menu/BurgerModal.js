@@ -2,30 +2,28 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import '../../styles/menu/BurgerModal.css';
 
-export default function BurgerModal({ data, showModal, setShowModal, product, setOrder, setMeat  }) {
+export default function BurgerModal({ data, showModal, setShowModal, product, setOrder, setMeat }) {
 
 /*   const [toppings, setToppings] = useState([]); */
-
-
-
   const meatOptions = data[product].meat;
 
   const toppingsOptions = Object.keys(data[product].toppings);
   const priceToppings = Object.values(data[product].toppings);
+
+
 
   return ReactDom.createPortal (
     <>
       {showModal ? (
           <div className='Overlay'>
             <div className='Modal'>
-              <div className='Modal-btn-close'>
-                <p className='Modal-title'>{product}</p>
-                <button
+                  <button
                   className='Btn-cancel'
                   onClick={() => setShowModal(prev => !prev)}>
                     <i className="fas fa-times"></i>
                 </button>
-              </div>
+
+              <p className='Modal-title'>{product}</p>
 
               <img
                 src={data[product].image}
@@ -45,8 +43,9 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
                   </label>
                 ))}
               </div>
-
+              <p className='Modal-toppings-title'>Adicionales</p>
               <div className='option-toppings'>
+
                 {toppingsOptions.map((toppings, index) => (
                   <label key={index + 'toppingsOptions'}>
                     <input
@@ -60,8 +59,12 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
               </div>
 
               <button
-                className='Add-order-btn'
-                onClick={setOrder}>
+                className='Modal-add-btn'
+                onClick={setOrder}
+                /* && setShowModal(prev => !prev) */
+
+
+              >
                   Agregar</button>
             </div>
           </div>

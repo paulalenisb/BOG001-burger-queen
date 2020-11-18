@@ -6,6 +6,7 @@ export default function OrderProduct({ product, index, setOrder, data, order }) 
 
   const [quantity, setQuantity] = useState(1);
 
+  //setTotalPrice(totalPrice + (data[product].price * quantity))
   return (
     //order.map((product, index)=>(
       <div className='Order-product' key={index}>
@@ -30,7 +31,8 @@ export default function OrderProduct({ product, index, setOrder, data, order }) 
         </div>
 
         <div className='Order-price'>
-          <p className='Order-number'>{'$ ' + data[product].price * quantity}</p>
+          <p className='Order-number'>{'$ ' + data[product].price * quantity }</p>
+
 
           <button
             className='Btn-product'
@@ -40,6 +42,7 @@ export default function OrderProduct({ product, index, setOrder, data, order }) 
           </button>
         </div>
       </div>
+
   )
 
 };
