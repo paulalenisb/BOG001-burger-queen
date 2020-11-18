@@ -29,7 +29,9 @@ export default function Cards({ index, setOrder, data, product, subMenu, foodTyp
 
       { subMenu === 'Burgers' && foodType === 'Lunch-Dinner' ? (
         <>
-          <button onClick={openModal}>Opciones</button>
+          <button
+            className='Product-btn'
+            onClick={openModal}>Opciones</button>
             <BurgerModal
               showModal={showModal}
               setShowModal={setShowModal}
@@ -40,7 +42,9 @@ export default function Cards({ index, setOrder, data, product, subMenu, foodTyp
         </>
       ): (
         <>
-        <button onClick={setOrder}>
+        <button
+          className='Product-btn'
+          onClick={setOrder}>
             Agregar
         </button>
         </>
