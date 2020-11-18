@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Cards from '../menu/Cards';
 import '../../styles/menu/TypeMenu.css';
 
-export default function TypeMenu({data, order, setOrder}) {
+export default function TypeMenu({ data, order, setOrder }) {
 
   const subMenuLunch = ['Burgers', 'Side-Orders','Drinks']
 
@@ -18,6 +18,12 @@ export default function TypeMenu({data, order, setOrder}) {
     }
     return data[productKey].submenu === subMenu // Arr Lunch
   }))
+
+  /* const algunaCosa ()=>{
+    order.map(product =>(
+      if(product === product[])
+    ))
+  } */
 
   return (
     <div className='Menu-section-container'>

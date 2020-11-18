@@ -32,6 +32,7 @@ export default function Cards({index, order, data, product}) {
           setShowModal={setShowModal}
           data={data}
           product={product}/>
+    
     </div>
   )
 }
