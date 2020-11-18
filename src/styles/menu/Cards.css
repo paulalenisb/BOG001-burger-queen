@@ -10,7 +10,7 @@
   width: 25vw;
   max-width: 250px;
   height: 25vw;
-  max-height: 250px ;
+  max-height: 270px ;
   margin: 20px 0;
   display: flex;
   flex-direction: column;
@@ -27,15 +27,29 @@
 .Product-price {
   align-self: flex-end;
   margin-right: 10%;
+  margin-bottom: 0px;
 }
 
 .Product-title {
-  font-weight: 400;
+  font-weight: 300px;
+  margin: 0px;
 }
 
 .Product-image {
-  width: 70%;
+  width: 60%;
   max-width: 200px;
   height: auto;
   border-radius: 20px;
+}
+
+.Product-btn{
+  border: 1px solid #E0052D;
+  border-radius: 20px;
+  width: 150px;
+  height: 30px;
+  font-size: 1.2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #E0052D;
+  color: aliceblue;
+  margin-bottom: 15px;
 }
