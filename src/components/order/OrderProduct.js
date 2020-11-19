@@ -15,7 +15,7 @@ export default function OrderProduct({ product, index, order, setOrder }) {
     return copyOrder
   }
 
-/* 
+/*
   const handleClick = ()=>{
     product.quantity =- 1
   } */
@@ -50,6 +50,7 @@ export default function OrderProduct({ product, index, order, setOrder }) {
             onClick={() => setOrder(order.filter((_,idx) => idx !== index ))}>
               <i className='fas fa-trash'></i>
           </button>
+          {console.log(order, product)}
         </div>
       </div>
   )

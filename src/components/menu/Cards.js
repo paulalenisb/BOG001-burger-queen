@@ -46,7 +46,7 @@ export default function Cards({ index, setOrder, data, product, subMenu, foodTyp
         <>
         <button
           className='Product-btn'
-          onClick={() => setOrder([...order, { product, quantity : 1 , price: data[product].price }])}>
+          onClick={() => setOrder([...order, { product, quantity : 1 , price: data[product].price, total: data[product].price }])}>
             Agregar
         </button>
         </>

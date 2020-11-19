@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ReactDom from 'react-dom';
 import '../../styles/menu/BurgerModal.css';
 
@@ -9,6 +9,8 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
 
   const toppingsOptions = Object.keys(data[product].toppings);
   const priceToppings = Object.values(data[product].toppings);
+  const [priceExtra, setPriceExtra] = useState(0);
+  const [extra, setExtra] = useState('');
 
   return ReactDom.createPortal (
     <>
@@ -52,16 +54,18 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
                       type='checkbox'
                       name={toppings}
                       id={toppings}
-                      value={toppings}/>
+                      value={1}
+                      onChange={(e) => {setExtra(e.currentTarget.name);setPriceExtra(e.currentTarget.value)}}/>
                       { toppings + '   $' + priceToppings[0] }
                   </label>
+
                 ))}
               </div>
-
+              {console.log(typeof(priceExtra))}
               <button
                 className='Modal-add-btn'
                 onClick={() =>
-                  setOrder([...order, { product: product + meatX, quantity: 1, price: data[product].price }])
+                  setOrder([...order, { product: product + meatX + extra, quantity: 1, price: data[product].price, total: data[product].price + priceExtra }])
                   }>
 
                   Agregar</button>
