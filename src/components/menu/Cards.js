@@ -4,7 +4,7 @@ import BurgerModal from '../menu/BurgerModal';
 import '../../styles/menu/LunchDinner.css';
 import '../../styles/menu/Cards.css';
 
-export default function Cards({ index, setOrder, data, product, subMenu, foodType, setMeat }) {
+export default function Cards({ index, setOrder, data, product, subMenu, foodType, setMeat, meatX, order }) {
 
   const [showModal, setShowModal] = useState(false);
 
@@ -37,14 +37,16 @@ export default function Cards({ index, setOrder, data, product, subMenu, foodTyp
             setShowModal={setShowModal}
             data={data}
             product={product}
-            setOrder={setOrder}
-            setMeat={setMeat}  />
+            order={order}
+            meatX ={meatX}
+            setMeat={setMeat}
+            setOrder={setOrder} />
         </>
       ): (
         <>
         <button
           className='Product-btn'
-          onClick={setOrder}>
+          onClick={() => setOrder([...order, { product, quantity : 1 , price: data[product].price }])}>
             Agregar
         </button>
         </>
