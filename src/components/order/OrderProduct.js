@@ -4,25 +4,21 @@ import '../../styles/order/OrderProduct.css';
 
 export default function OrderProduct({ product, index, order, setOrder }) {
 
-/*  const changeQuantity = (index, originalOrder, num ) =>{
+ const changeQuantity = (index, originalOrder, num ) =>{
     const copyOrder = [...originalOrder];
     copyOrder[index].quantity += num;
 
     if (copyOrder[index].quantity <= 0){
       copyOrder.splice(index, 1);
     }
-    //console.log(data.product.price)
-
-    product.price = product.price * product.quantity
+    product.total = product.price*product.quantity
     return copyOrder
-  } */
+  }
 
-//{product, quantity : 1 , price: data[product].price }
-
+/* 
   const handleClick = ()=>{
     product.quantity =- 1
-  }
-console.log(product)
+  } */
 
   return (
       <div className='Order-product' key={index}>
@@ -32,7 +28,7 @@ console.log(product)
           <button
             className='Btn-product'
             aria-label='Restar producto'
-            onClick={() => handleClick}>
+            onClick={() => setOrder(changeQuantity(index,order, -1))}>
             <i className='fas fa-minus'></i>
           </button>
 
@@ -41,20 +37,17 @@ console.log(product)
           <button
             className='Btn-product'
             aria-label='Sumar producto'
-            onClick={()=>setOrder()}>
+            onClick={()=> setOrder(changeQuantity(index,order, 1))}>
               <i className='fas fa-plus'></i>
           </button>
         </div>
 
         <div className='Order-price'>
-
-          <p className='Order-number'>{'$ ' + product.price  }</p>
-          {}
-
+          <p className='Order-number'>{'$ ' + product.total }</p>
           <button
             className='Btn-product'
             aria-label='Eliminar producto'
-            onClick={() => setOrder(order.filter((idx) => console.log(order[idx]) ))}>
+            onClick={() => setOrder(order.filter((_,idx) => idx !== index ))}>
               <i className='fas fa-trash'></i>
           </button>
         </div>
