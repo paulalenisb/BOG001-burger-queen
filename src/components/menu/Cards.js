@@ -38,7 +38,7 @@ export default function Cards({ index, setOrder, data, product, subMenu, foodTyp
             data={data}
             product={product}
             setOrder={setOrder}
-            setMeat={setMeat} />
+            setMeat={setMeat}  />
         </>
       ): (
         <>

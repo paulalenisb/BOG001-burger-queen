@@ -13,3 +13,6 @@ export default function OrderTotal({ order }) {
 }
 
 // Vives??
+//Puedes abrir cards
+// no puedo subir la ramita, porque no puedo subir la ramita ? :(
+// ahí pueden entrar ?
