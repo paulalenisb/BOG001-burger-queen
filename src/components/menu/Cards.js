@@ -32,13 +32,13 @@ export default function Cards({ index, setOrder, data, product, subMenu, foodTyp
           <button
             className='Product-btn'
             onClick={openModal}>Opciones</button>
-            <BurgerModal
-              showModal={showModal}
-              setShowModal={setShowModal}
-              data={data}
-              product={product}
-              setOrder={setOrder}
-              setMeat={setMeat}/>
+          <BurgerModal
+            showModal={showModal}
+            setShowModal={setShowModal}
+            data={data}
+            product={product}
+            setOrder={setOrder}
+            setMeat={setMeat} />
         </>
       ): (
         <>

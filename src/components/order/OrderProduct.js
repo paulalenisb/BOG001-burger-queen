@@ -1,48 +1,64 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import '../../styles/order/OrderProduct.css';
 
-export default function OrderProduct({ product, index, setOrder, data, order }) {
+export default function OrderProduct({ product, index, order, setOrder }) {
 
-  const [quantity, setQuantity] = useState(1);
+/*  const changeQuantity = (index, originalOrder, num ) =>{
+    const copyOrder = [...originalOrder];
+    copyOrder[index].quantity += num;
 
-  //setTotalPrice(totalPrice + (data[product].price * quantity))
+    if (copyOrder[index].quantity <= 0){
+      copyOrder.splice(index, 1);
+    }
+    //console.log(data.product.price)
+
+    product.price = product.price * product.quantity
+    return copyOrder
+  } */
+
+//{product, quantity : 1 , price: data[product].price }
+
+  const handleClick = ()=>{
+    product.quantity =- 1
+  }
+console.log(product)
+
   return (
-    //order.map((product, index)=>(
       <div className='Order-product' key={index}>
-        <p>{product}</p>
+        <p>{product.product}</p>
 
         <div className='Order-quantity'>
           <button
             className='Btn-product'
             aria-label='Restar producto'
-            onClick={()=>{ quantity - 1 === 0 ? setOrder(order.filter((_,idx) => idx !== index )): setQuantity(quantity-1)}}>
+            onClick={() => handleClick}>
             <i className='fas fa-minus'></i>
           </button>
 
-          <p className='Order-number'>{quantity}</p>
+          <p className='Order-number'>{product.quantity}</p>
 
           <button
             className='Btn-product'
             aria-label='Sumar producto'
-            onClick={()=>{setQuantity(quantity + 1)}}>
+            onClick={()=>setOrder()}>
               <i className='fas fa-plus'></i>
           </button>
         </div>
 
         <div className='Order-price'>
-          <p className='Order-number'>{'$ ' + data[product].price * quantity }</p>
 
+          <p className='Order-number'>{'$ ' + product.price  }</p>
+          {}
 
           <button
             className='Btn-product'
             aria-label='Eliminar producto'
-            onClick={() => setOrder(order.filter((_,idx) => idx !== index ))} >
+            onClick={() => setOrder(order.filter((idx) => console.log(order[idx]) ))}>
               <i className='fas fa-trash'></i>
           </button>
         </div>
       </div>
-
   )
 
 };

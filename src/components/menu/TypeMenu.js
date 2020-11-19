@@ -68,7 +68,7 @@ export default function TypeMenu({ data, order, setOrder}) {
             subMenu= {subMenu}
             foodType={foodType}
             setMeat ={setMeat}
-            setOrder={() => setOrder([...order, product])}
+            setOrder={() => setOrder([...order, {product, quantity : 1 , price: data[product].price }])}
           />
           ))
         }

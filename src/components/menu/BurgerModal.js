@@ -10,18 +10,16 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
   const toppingsOptions = Object.keys(data[product].toppings);
   const priceToppings = Object.values(data[product].toppings);
 
-
-
   return ReactDom.createPortal (
     <>
       {showModal ? (
           <div className='Overlay'>
             <div className='Modal'>
-                  <button
-                  className='Btn-cancel'
-                  onClick={() => setShowModal(prev => !prev)}>
-                    <i className="fas fa-times"></i>
-                </button>
+              <button
+                className='Btn-cancel'
+                onClick={() => setShowModal(prev => !prev)}>
+                  <i className="fas fa-times"></i>
+              </button>
 
               <p className='Modal-title'>{product}</p>
 
@@ -39,11 +37,13 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
                       id={meat}
                       value={meat}
                       onChange={(e)=>setMeat(e.target.value)} />
-                        {meat}
+                      {meat}
                   </label>
                 ))}
               </div>
+
               <p className='Modal-toppings-title'>Adicionales</p>
+
               <div className='option-toppings'>
 
                 {toppingsOptions.map((toppings, index) => (
@@ -60,11 +60,8 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
 
               <button
                 className='Modal-add-btn'
-                onClick={setOrder}
-                /* && setShowModal(prev => !prev) */
-
-
-              >
+                onClick={() =>{ setOrder()
+                  setShowModal(prev => !prev)} }>
                   Agregar</button>
             </div>
           </div>
@@ -73,5 +70,4 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
     </>,
     document.getElementById('portal')
   )
-
 }
