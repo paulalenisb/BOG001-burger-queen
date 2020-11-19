@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import '../../styles/menu/BurgerModal.css';
 
-export default function BurgerModal({ data, showModal, setShowModal, product, setOrder, setMeat }) {
+export default function BurgerModal({ data, showModal, setShowModal, product, setOrder, setMeat, meatX, order }) {
 
 /*   const [toppings, setToppings] = useState([]); */
   const meatOptions = data[product].meat;
@@ -36,7 +36,7 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
                       name={meat}
                       id={meat}
                       value={meat}
-                      onChange={(e)=>setMeat(e.target.value)} />
+                      onChange={(e)=>setMeat(e.currentTarget.value)} />
                       {meat}
                   </label>
                 ))}
@@ -60,8 +60,10 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
 
               <button
                 className='Modal-add-btn'
-                onClick={() =>{ setOrder()
-                  setShowModal(prev => !prev)} }>
+                onClick={() =>
+                  setOrder([...order, { product: product + meatX, quantity: 1, price: data[product].price }])
+                  }>
+
                   Agregar</button>
             </div>
           </div>
@@ -71,3 +73,5 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
     document.getElementById('portal')
   )
 }
+
+/// setShowModal(prev => !prev);}>

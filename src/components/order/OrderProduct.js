@@ -49,7 +49,7 @@ console.log(product)
         <div className='Order-price'>
 
           <p className='Order-number'>{'$ ' + product.price  }</p>
-          {}
+          
 
           <button
             className='Btn-product'
