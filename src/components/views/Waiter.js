@@ -42,6 +42,7 @@ export default function Waiter() {
             <ClientName />
             <OrderResume />
 
+          <div className='Order-products-container'>
             {order.map((product, index) => (
               <OrderProduct
                 key={index + 'orderProduct'}
@@ -51,6 +52,8 @@ export default function Waiter() {
                 setOrder={setOrder}
               />
             ))}
+          </div>
+
 
             <div className='Order-bottom'>
               <OrderTotal order ={order}/>

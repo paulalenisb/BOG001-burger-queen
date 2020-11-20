@@ -4,7 +4,7 @@ import '../../styles/order/OrderProduct.css';
 
 export default function OrderProduct({ product, index, order, setOrder }) {
 
- const changeQuantity = (index, originalOrder, num ) =>{
+  const changeQuantity = (index, originalOrder, num ) =>{
     const copyOrder = [...originalOrder];
     copyOrder[index].quantity += num;
 
@@ -17,10 +17,10 @@ export default function OrderProduct({ product, index, order, setOrder }) {
 
 
   return (
-      <div className='Order-product' key={index}>
-        <p>{product.product}</p>
+      <div className='Order-product Center-row' key={index}>
+        <p className='Order-product-name'>{product.product}</p>
 
-        <div className='Order-quantity'>
+        <div className='Order-quantity Center-row'>
           <button
             className='Btn-product'
             aria-label='Restar producto'
@@ -39,7 +39,7 @@ export default function OrderProduct({ product, index, order, setOrder }) {
         </div>
 
         <div className='Order-price'>
-          <p className='Order-number'>{'$ ' + product.total }</p>
+          <p className='Order-number-price'>{'$ ' + product.total }</p>
           <button
             className='Btn-product'
             aria-label='Eliminar producto'

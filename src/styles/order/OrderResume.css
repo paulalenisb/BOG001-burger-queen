@@ -1,13 +1,22 @@
-.Order-titles{
+.Order-titles {
   color:#E0052D;
   width: 100%;
   text-align: center;
 }
 
-.Order-categories{
-  width: 100%;
+.Order-categories {
+  width: 90%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   list-style-type: none;
   font-weight: 700;
+}
+
+
+.Product-resume {
+  width: 36%;
+}
+
+.Quantity-resume, .Price-resume {
+  width: 27%;
 }

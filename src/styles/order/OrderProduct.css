@@ -1,18 +1,18 @@
-.Order-product{
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+.Order-product {
+  width: 90%;
   text-align: center;
-  align-items: center;
-  
 }
 
-.Order-quantity, .Order-price{
-  display: flex;
-  align-items: center;
+.Order-product-name {
+  text-align: left;
+  width: 36%;
 }
 
-.Btn-product{
+.Order-quantity, .Order-price {
+  width: 27%;
+}
+
+.Btn-product {
   width: 30px;
   height: 30px;
   background-color: transparent;
@@ -21,10 +21,19 @@
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
-i{
+i {
   color:#E0052D;
 }
 
-.Order-number{
-  margin: 10px;
+.Order-price {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
+
+.Order-number-price {
+  margin-right: 10px;
+}
+
+
+

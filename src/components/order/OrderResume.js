@@ -4,8 +4,8 @@ import '../../styles/order/OrderResume.css';
 
 export default function OrderResume() {
   return (
-    <div className='Order-titles'>
-      <h2 className='Order-resume'>Resumen de la orden</h2>
+    <div className='Order-titles Center-column'>
+      <h2 className='Order-resume'>Resumen del pedido</h2>
       <ul className='Order-categories'>
         <li className='Product-resume'>Producto</li>
         <li className='Quantity-resume'>Cantidad</li>
