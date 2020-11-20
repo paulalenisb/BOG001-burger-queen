@@ -3,10 +3,6 @@
   height: 100vh;
   text-align: center;
   background-color: #E0052D;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .Home-logo {

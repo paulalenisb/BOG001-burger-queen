@@ -5,7 +5,7 @@ import '../../styles/viewsCss/Home.css';
 
 export default function Home({ history })  {
   return (
-    <div className='Home'>
+    <div className='Home Center-column'>
       <img src={Logo} className='Home-logo' alt='Burguer Queeen Logo'/>
       <div className='Home-btn-container'>
         <button className='Home-btn' onClick= {() => { history.push('/waiter') }}>Mesero</button>
