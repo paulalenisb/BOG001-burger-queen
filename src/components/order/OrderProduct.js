@@ -15,10 +15,6 @@ export default function OrderProduct({ product, index, order, setOrder }) {
     return copyOrder
   }
 
-/*
-  const handleClick = ()=>{
-    product.quantity =- 1
-  } */
 
   return (
       <div className='Order-product' key={index}>

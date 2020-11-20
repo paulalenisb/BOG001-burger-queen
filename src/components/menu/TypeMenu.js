@@ -9,7 +9,7 @@ export default function TypeMenu({ data, order, setOrder}) {
 
   const [foodType, setFoodType] = useState('Breakfast');
   const [subMenu, setSubMenu] = useState('Burgers');
-  const [meatX, setMeat] = useState('');
+  const [meatOptn, setMeatOptn] = useState('');
 
   const menu = Object.keys(data).filter((productKey => {
     if (foodType !== data[productKey].type){
@@ -21,11 +21,6 @@ export default function TypeMenu({ data, order, setOrder}) {
     return data[productKey].submenu === subMenu // Arr Lunch
   }))
 
-  /* const algunaCosa ()=>{
-    order.map(product =>(
-      if(product === product[])
-    ))
-  } */
 
   return (
     <div className='Menu-section-container'>
@@ -67,8 +62,8 @@ export default function TypeMenu({ data, order, setOrder}) {
             index={index}
             subMenu= {subMenu}
             foodType={foodType}
-            meatX={meatX}
-            setMeat={setMeat}
+            meatOptn={meatOptn}
+            setMeatOptn={setMeatOptn}
             order={order}
             setOrder={setOrder}
           />

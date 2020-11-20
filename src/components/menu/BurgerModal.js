@@ -2,11 +2,9 @@ import React, {useState} from 'react';
 import ReactDom from 'react-dom';
 import '../../styles/menu/BurgerModal.css';
 
-export default function BurgerModal({ data, showModal, setShowModal, product, setOrder, setMeat, meatX, order }) {
+export default function BurgerModal({ data, showModal, setShowModal, product, setOrder, setMeatOptn, meatOptn, order }) {
 
-/*   const [toppings, setToppings] = useState([]); */
   const meatOptions = data[product].meat;
-
   const toppingsOptions = Object.keys(data[product].toppings);
   const priceToppings = Object.values(data[product].toppings);
   const [priceExtra, setPriceExtra] = useState(0);
@@ -38,7 +36,7 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
                       name={meat}
                       id={meat}
                       value={meat}
-                      onChange={(e)=>setMeat(e.currentTarget.value)} />
+                      onChange={(e)=>setMeatOptn(e.currentTarget.value)} />
                       {meat}
                   </label>
                 ))}
@@ -54,20 +52,18 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
                       type='checkbox'
                       name={toppings}
                       id={toppings}
-                      value={1}
+                      value= {1}
                       onChange={(e) => {setExtra(e.currentTarget.name);setPriceExtra(e.currentTarget.value)}}/>
                       { toppings + '   $' + priceToppings[0] }
                   </label>
-
                 ))}
               </div>
-              {console.log(typeof(priceExtra))}
+
               <button
                 className='Modal-add-btn'
-                onClick={() =>
-                  setOrder([...order, { product: product + meatX + extra, quantity: 1, price: data[product].price, total: data[product].price + priceExtra }])
+                onClick={() => {setOrder([...order, { product:`${product} ${meatOptn} ${extra}`, quantity: 1, price: data[product].price, total: data[product].price + parseInt(priceExtra)}])
+                  setShowModal(prev => !prev)}
                   }>
-
                   Agregar</button>
             </div>
           </div>
@@ -76,6 +72,6 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
     </>,
     document.getElementById('portal')
   )
-}
+};
 
-/// setShowModal(prev => !prev);}>
+// setShowModal(prev => !prev);

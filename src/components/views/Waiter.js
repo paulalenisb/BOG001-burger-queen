@@ -18,8 +18,6 @@ import '../../styles/order/Order.css';
 export default function Waiter() {
   const [order, setOrder] = useState([]);
 
-  //const [totalPrice, setTotalPrice] = useState(0);
-
   /* const objOrder = {
     client: 'setClientName',
     products: order[{product: juguito, quantity: 2, price: 14},],

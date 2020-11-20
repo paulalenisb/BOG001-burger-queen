@@ -4,7 +4,7 @@ import BurgerModal from '../menu/BurgerModal';
 import '../../styles/menu/LunchDinner.css';
 import '../../styles/menu/Cards.css';
 
-export default function Cards({ index, setOrder, data, product, subMenu, foodType, setMeat, meatX, order }) {
+export default function Cards({ index, setOrder, data, product, subMenu, foodType, meatOptn, setMeatOptn, order }) {
 
   const [showModal, setShowModal] = useState(false);
 
@@ -38,8 +38,8 @@ export default function Cards({ index, setOrder, data, product, subMenu, foodTyp
             data={data}
             product={product}
             order={order}
-            meatX ={meatX}
-            setMeat={setMeat}
+            meatOptn ={meatOptn}
+            setMeatOptn={setMeatOptn}
             setOrder={setOrder} />
         </>
       ): (
