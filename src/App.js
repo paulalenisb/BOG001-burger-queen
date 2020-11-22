@@ -5,6 +5,7 @@ import Waiter from './components/views/Waiter';
 import NotFound from './components/views/NotFound';
 import Kitchen from './components/views/Kitchen';
 
+
 export default function App() {
   return (
     <BrowserRouter>

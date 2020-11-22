@@ -7,8 +7,12 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
   const meatOptions = data[product].meat;
   const toppingsOptions = Object.keys(data[product].toppings);
   const priceToppings = Object.values(data[product].toppings);
-  const [priceExtra, setPriceExtra] = useState(0);
-  const [extra, setExtra] = useState('');
+  const [priceExtra, setPriceExtra] = useState([]);
+  const [extra, setExtra] = useState([]);
+  let algo = priceExtra
+  
+  console.log(algo)
+
 
   return ReactDom.createPortal (
     <>
@@ -53,15 +57,16 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
                       name={toppings}
                       id={toppings}
                       value= {1}
-                      onChange={(e) => {setExtra(e.currentTarget.name);setPriceExtra(e.currentTarget.value)}}/>
+                      onChange={(e) => {setExtra([...extra,e.currentTarget.name]); setPriceExtra( [ ...priceExtra, parseInt(e.currentTarget.value)]) }}/>
                       { toppings + '   $' + priceToppings[0] }
                   </label>
                 ))}
+                
               </div>
-
+              
               <button
                 className='Modal-add-btn'
-                onClick={() => {setOrder([...order, { product:`${product} ${meatOptn} ${extra}`, quantity: 1, price: data[product].price, total: data[product].price + parseInt(priceExtra)}])
+                onClick={() => {setOrder([...order, { product:`${product} ${meatOptn} ${extra}`, quantity: 1, price: data[product].price,   total: data[product].price + algo.reduce((finalTotal,currentValue) => finalTotal + currentValue,0) }])
                   setShowModal(prev => !prev)}
                   }>
                   Agregar</button>

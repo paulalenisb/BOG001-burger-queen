@@ -17,13 +17,18 @@ import '../../styles/order/Order.css';
 //Cambiar nombre nuevo Pedido
 export default function Waiter() {
   const [order, setOrder] = useState([]);
+  const [client, setClient]=useState('');
+  const [total, setTotal]= useState(0);
+  
 
-  /* const objOrder = {
-    client: 'setClientName',
-    products: order[{product: juguito, quantity: 2, price: 14},],
-    total: setTotalPrice,
-    createdAt: Date.now()
-  } */
+  let objOrder = {
+    name: client,
+    uid: 'Waiter',
+    products: order,
+    totalOrder: total
+  } 
+
+  console.log(objOrder)
 
   return (
     <div className='Waiter'>
@@ -39,7 +44,7 @@ export default function Waiter() {
 
         <section className='Order-section'>
           <div className='Order'>
-            <ClientName />
+            <ClientName  setClient={setClient}/>
             <OrderResume />
 
           <div className='Order-products-container'>
@@ -56,8 +61,9 @@ export default function Waiter() {
 
 
             <div className='Order-bottom'>
-              <OrderTotal order ={order}/>
-              <OrderBtn />
+              <OrderTotal order ={order} setTotal={setTotal} total={total}/>
+
+              <OrderBtn  objOrder={objOrder}  />
             </div>
           </div>
         </section>

@@ -13,8 +13,7 @@ export default function OrderProduct({ product, index, order, setOrder }) {
     }
     product.total = product.price*product.quantity
     return copyOrder
-  }
-
+  };
 
   return (
       <div className='Order-product Center-row' key={index}>
@@ -46,9 +45,7 @@ export default function OrderProduct({ product, index, order, setOrder }) {
             onClick={() => setOrder(order.filter((_,idx) => idx !== index ))}>
               <i className='fas fa-trash'></i>
           </button>
-          {console.log(order, product)}
         </div>
       </div>
   )
-
 };
