@@ -4,6 +4,7 @@ import Logo from '../../assets/images/Logo-BQ2.png';
 import '../../styles/viewsCss/Home.css';
 
 export default function Home({ history })  {
+
   return (
     <div className='Home Center-column'>
       <img src={Logo} className='Home-logo' alt='Burguer Queeen Logo'/>

@@ -1,0 +1,61 @@
+.Cooking-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30%;
+    width: 40%;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Info-name-clock {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    top:0;
+    border-radius:20px 20px 0 0;
+    background-color: #E0052D;
+    color: white;
+}
+
+.Cooking-time, .Name-client {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+
+.Info-name-clock p, .Name-client h3 {
+    margin: 0;
+}
+
+.Name-client h3, .Cooking-time i {
+    color: #FFCD05;
+    margin-right: 2%;
+}
+
+.Order-products {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 160px;
+    overflow-y: scroll;
+    /* background-color: aquamarine; */
+}
+
+.Order-products ul {
+    list-style: none;
+}
+
+.ready-btn {
+  border: 1px solid #E0052D;
+  border-radius: 20px;
+  width: 50%;
+  height: 10%;
+  font-size: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #E0052D;
+  color: white;
+}

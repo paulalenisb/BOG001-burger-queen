@@ -15,4 +15,5 @@ import React from 'react';
         <p> Holi, Aqui los estados de los pedidos para entregar</p>
       </div>
     )
-  }
+  };
+  

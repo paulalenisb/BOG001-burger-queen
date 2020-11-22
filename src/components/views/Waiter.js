@@ -33,6 +33,8 @@ export default function Waiter() {
 
   console.log(objOrder)
 
+  
+
   useEffect(() => {
     setTotal(order.reduce((finalTotal, { total }) => finalTotal + total, 0))
   },[order, setOrder])
@@ -53,7 +55,7 @@ export default function Waiter() {
 
         <section className='Order-section'>
           <div className='Order'>
-            <ClientName  setClient={setClient}/>
+            <ClientName  setClient={setClient} />
             <OrderResume />
 
           <div className='Order-products-container'>
@@ -84,4 +86,4 @@ export default function Waiter() {
       <Footer />
     </div>
   )
-}
+};

@@ -1,35 +1,42 @@
-import db from './firebaseConfig'
-//import firebase from 'firebase/app';
+import firebase from 'firebase/app';
+//import db from './firebaseConfig'
 import 'firebase/firestore'
 
-//import * as firebase from 'firebase';
-
-/* async function newOrder (orderObj) {
-	try {
-		const order = await db.collection('order').add({
-      name: orderObj.name,
-			uid:orderObj.uid,
-      products: orderObj.products,
-      date: firebase.firestore.Timestamp.now(),
-      totalOrder: orderObj.totalOrder,
-      sending: orderObj.sending,
-      ready: orderObj.ready,
-      delivery: orderObj.delivery
-    });
-    console.log(order)
-		return order;
-	} catch (error) {
-		return error.message;
-	}
-}; */
 
 //  -----------gettingDataOrderByCondition------------
-export default async function gettingDataOrdered(collection, param, asds) {
+/* async function gettingDataOrdered(collection, param, asds) {
 	try {
 		const dataPost = await db.collection(collection).orderBy(param, asds).get();
 		return dataPost;
 	} catch (error) {
 		return error.message;
 	}
+}; */
+const db = firebase.firestore();
+//  -----------gettingData------------
+export default async function gettingData(collection) {
+	try {
+		const orderData = await db.collection(collection).get();
+		console.log(collection, orderData)
+		return orderData;
+	} catch (error) {
+		return error.message;
+	}
 };
 
+//const onGetPosts = (callback) => db.collection('review').orderBy('date', 'desc').onSnapshot(callback);
+// export const getPosts = () => db.collection('review').get();
+
+// useEffect(() => {
+//     db.collection('orders')
+//       .orderBy('date', 'desc')
+//       .onSnapshot((querySnapshot) => {
+//         const arrayData = []
+//         querySnapshot.forEach((doc) => {
+//           const data = doc.data()
+//           arrayData.push({ ...data, idDoc: doc.id })
+//         })
+//         setOrder(arrayData);
+//         setIdOrder(arrayData.length)
+//       })
+//   }, [])

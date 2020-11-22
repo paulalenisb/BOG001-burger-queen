@@ -69,8 +69,7 @@ export default function TypeMenu({ data, order, setOrder}) {
           />
           ))
         }
-       
       </div>
     </div>
   )
-}
+};

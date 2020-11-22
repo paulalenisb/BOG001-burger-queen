@@ -29,7 +29,8 @@ export default async function newOrder (orderObj) {
       ready: orderObj.ready,
       delivery: orderObj.delivery
     });
-    console.log(order)
+    console.log(db)
+
 		return order;
 	} catch (error) {
 		return error.message;

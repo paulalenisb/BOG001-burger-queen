@@ -1,9 +1,21 @@
-import React from 'react';
+import React,{ useEffect} from 'react';
+import CookingCard from '../cardState/CookingCard'
+import  gettingData from '../../firebaseFunc';
+
+import '../../styles/viewsCss/Kitchen.css';
 
   export default function Kitchen() {
+
+    useEffect(()=>{
+      gettingData('order').then((doc) => {
+        console.log(doc)
+      }); 
+    })
+    
     return (
-      <div>
-        <p> Holi, esta es la cocina</p>
+      <div className='Kitchen'>
+        
+        <CookingCard />
       </div>
     )
   }

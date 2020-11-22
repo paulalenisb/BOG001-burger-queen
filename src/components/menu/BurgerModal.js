@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import ReactDom from 'react-dom';
+
 import '../../styles/menu/BurgerModal.css';
 
 export default function BurgerModal({ data, showModal, setShowModal, product, setOrder, setMeatOptn, meatOptn, order }) {
@@ -9,10 +10,8 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
   const priceToppings = Object.values(data[product].toppings);
   const [priceExtra, setPriceExtra] = useState([]);
   const [extra, setExtra] = useState([]);
-  let algo = priceExtra
+  let copyPrice = priceExtra
   
-  console.log(algo)
-
 
   return ReactDom.createPortal (
     <>
@@ -66,7 +65,7 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
               
               <button
                 className='Modal-add-btn'
-                onClick={() => {setOrder([...order, { product:`${product} ${meatOptn} ${extra}`, quantity: 1, price: data[product].price,   total: data[product].price + algo.reduce((finalTotal,currentValue) => finalTotal + currentValue,0) }])
+                onClick={() => {setOrder([...order, { product:`${product} ${meatOptn} ${extra}`, quantity: 1, price: data[product].price,   total: data[product].price + copyPrice.reduce((finalTotal,currentValue) => finalTotal + currentValue,0) }])
                   setShowModal(prev => !prev)}
                   }>
                   Agregar</button>
@@ -78,5 +77,3 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
     document.getElementById('portal')
   )
 };
-
-// setShowModal(prev => !prev);
