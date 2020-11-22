@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import NavWaiter from '../navBar/NavBarWaiter';
 import TypeMenu from '../menu/TypeMenu';
 import Footer from '../navBar/Footer';
@@ -25,10 +25,18 @@ export default function Waiter() {
     name: client,
     uid: 'Waiter',
     products: order,
-    totalOrder: total
+    totalOrder: total,
+    sending: true,
+    ready: false,
+    delivery:false
   } 
 
   console.log(objOrder)
+
+  useEffect(() => {
+    setTotal(order.reduce((finalTotal, { total }) => finalTotal + total, 0))
+  },[order, setOrder])
+
 
   return (
     <div className='Waiter'>
@@ -39,7 +47,8 @@ export default function Waiter() {
           <TypeMenu
             data={Data.menu }
             order={order}
-            setOrder={setOrder} />
+            setOrder={setOrder} 
+            />
         </section>
 
         <section className='Order-section'>
@@ -55,15 +64,19 @@ export default function Waiter() {
                 index={index}
                 order={order}
                 setOrder={setOrder}
+                setTotal ={setTotal}
               />
             ))}
           </div>
 
-
             <div className='Order-bottom'>
-              <OrderTotal order ={order} setTotal={setTotal} total={total}/>
+              <OrderTotal total={total}/>
 
-              <OrderBtn  objOrder={objOrder}  />
+              <OrderBtn  
+              objOrder={objOrder} 
+              setOrder={setOrder} 
+              setClient={setClient} 
+              />
             </div>
           </div>
         </section>

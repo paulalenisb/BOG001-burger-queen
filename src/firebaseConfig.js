@@ -2,7 +2,6 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore'
 
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyD_wBUzkDaeX6XwcAoJjCMLixvtfUlSDzU",
@@ -25,7 +24,10 @@ export default async function newOrder (orderObj) {
 			uid:orderObj.uid,
       products: orderObj.products,
       date: firebase.firestore.Timestamp.now(),
-      totalOrder: orderObj.totalOrder
+      totalOrder: orderObj.totalOrder,
+      sending: orderObj.sending,
+      ready: orderObj.ready,
+      delivery: orderObj.delivery
     });
     console.log(order)
 		return order;

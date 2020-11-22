@@ -46,6 +46,7 @@ export default function OrderProduct({ product, index, order, setOrder }) {
               <i className='fas fa-trash'></i>
           </button>
         </div>
+        
       </div>
   )
 };
