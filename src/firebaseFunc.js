@@ -17,7 +17,6 @@ const db = firebase.firestore();
 export default async function gettingData(collection) {
 	try {
 		const orderData = await db.collection(collection).get();
-		console.log(collection, orderData)
 		return orderData;
 	} catch (error) {
 		return error.message;

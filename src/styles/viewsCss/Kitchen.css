@@ -1,4 +1,7 @@
 .Kitchen {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-around;
     background-color: #F6F6F6;
-    height: 100vh;
 }
