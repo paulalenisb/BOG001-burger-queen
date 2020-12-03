@@ -8,7 +8,7 @@ import Footer from '../navBar/Footer';
 // Styles
 import '../../styles/viewsCss/Kitchen.css';
 
-  export default function Kitchen() {
+  export default function HistoryOrder() {
 
     const [orderMaked, setOrderMaked]= useState([]);
 
@@ -23,17 +23,14 @@ import '../../styles/viewsCss/Kitchen.css';
         const orders = doc.docs.map(doc=>{ return { id: doc.id, ...doc.data()}});
         setOrderMaked(orders)
       }); 
-    }, []) //aqui van las que cosas que detenienen el useEffect, (aquí podría estar el error)
-
-//Si ready es false
-//ready es true
-//delivery true
+    }, []) 
+    
     return (
       <div className="Kitchen-section">
         <NavBar nav={navKitchen}/>
 
         <div className='Kitchen'>
-          {orderMaked.filter((algo) =>  algo.ready === false).map((order, index)=>(
+          {orderMaked.filter((algo) =>  algo.delivery === true).map((order, index)=>(
             <CookingCard order={order} index={index}/>
           ))} 
         </div>

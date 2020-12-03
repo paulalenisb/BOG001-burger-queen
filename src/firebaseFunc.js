@@ -24,12 +24,14 @@ async function gettingData(collection) {
 };
 
 //  -----------updateData------------
-async function updateData(collection, id, time) {
+async function updateData(collection, id, time, state) {
 	try {
 		const dataUpdate = await db.collection(collection).doc(id)
-		return dataUpdate.update({
+		const updateObj = dataUpdate.update({
 			time: time,
+			ready: state,
 		});
+		return updateObj;
 	} catch (error) {
 		return error.message;
 	}

@@ -1,26 +1,31 @@
-import React from 'react';
+import React, {  useState, useEffect } from 'react';
 import NavBar from '../navBar/NavBar';
 import Footer from '../navBar/Footer';
+import { gettingData } from '../../firebaseFunc';
 
-//import db from '../../firebaseConfig'
-//import  gettingDataOrdered from '../../firebaseFunc';
 
-  export default function orderState() {
-
+export default function  orderState() {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [delivery, setDelivery]= useState([])
     const navWaiter = [
       {route: '/waiter', name:'Nuevo Pedido'}, 
       {route: '/orderState', name:'Pedidos Listos'}
     ]
       
-    /*  db.collection('order').onSnapshot(function (doc) {
-        console.log(doc)
-    gettingDataOrdered('order', 'date', 'desc').then( (doc) => console.log(doc))
-    }) */
-
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(()=>{
+      gettingData('order').then((doc) => {
+        const orders = doc.docs.map(doc=>{ return { id: doc.id, ...doc.data()}});
+        setDelivery(orders)
+      }); 
+    }, [])
+    console.log(delivery)
     return (
       <div>
         <NavBar nav={navWaiter} />
-        <p>Holi, Aqui los estados de los pedidos para entregar</p>
+        {delivery.filter((algo) =>  algo.delivery === false).map((deliveryOrder)=>(
+          <p>{deliveryOrder.id}</p>
+        ))}
         <Footer />
       </div>
     )

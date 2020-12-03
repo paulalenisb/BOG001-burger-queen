@@ -11,22 +11,19 @@ export default function CookingCard({ order, index }) {
   const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((time % (1000 * 60)) / 1000);
-  console.log(hours, minutes, seconds, Date.now().toString(), order.date.nanoseconds/1000000000)
-
-console.log(order)
+  const sec = order.date.nanoseconds/1000000000
+  
   useEffect(()=>{
     const x = setInterval(() => {
-      setTime(() => Date.now() - (order.date.seconds + order.date.nanoseconds/100000) );
+      setTime(() => Date.now() - (order.date.seconds + sec)*1000);
     }, 1000);
     return () => clearInterval(x);
-  }, [order.date])
+  }, [order.date, sec])
 
   const handleStop = () => {
+    const readyOrder = true;
     const time = `${hours}h ${minutes}m ${seconds}s`
-    updateData('order', order.id, time, {
-      ready: true,
-      time: time,
-    })
+    updateData('order', order.id, time, readyOrder);
   }
   
   return(
@@ -59,7 +56,7 @@ console.log(order)
         </ul>
       </div>
       
-      <button className= 'ready-btn'onClick={()=>handleStop }>¡Listo!</button>
+      <button className= 'ready-btn'onClick={()=>handleStop() }>¡Listo!</button>
     </div>
   )
 }

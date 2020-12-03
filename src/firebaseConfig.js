@@ -21,7 +21,8 @@ export default async function newOrder (orderObj) {
 	try {
 		const order = await db.collection('order').add({
       name: orderObj.name,
-			uid:orderObj.uid,
+      uid:orderObj.uid,
+      time: orderObj.time,
       products: orderObj.products,
       date: firebase.firestore.Timestamp.now(),
       totalOrder: orderObj.totalOrder,

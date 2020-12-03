@@ -24,7 +24,7 @@ export default function NavBar({ nav }) {
                 className='Nav-waiter-item'
                 activeClassName='Nav-waiter__item--active'
                 to= {view.route}>
-                  {view.name}
+                {view.name}
               </NavLink>
           )}
         </div>
