@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import BurgerModal from '../menu/BurgerModal';
 
+// Styles
 import '../../styles/menu/LunchDinner.css';
 import '../../styles/menu/Cards.css';
 

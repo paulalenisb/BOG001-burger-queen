@@ -1,3 +1,8 @@
+a:link, a:visited, a:active {
+  text-decoration:none;
+  color: white;
+}
+
 .Header-nav-waiter {
   width: 100vw;
   height: 60px;
@@ -22,10 +27,6 @@
   list-style-type: none;
 }
 
-.Nav-waiter-item {
-  margin-right: 40px;
-}
-
 .Nav-home-icon {
   width: 35px;
   height: auto;
@@ -42,4 +43,13 @@
 .Nav-waiter-logo {
   width: auto;
   height: 50px;
+}
+
+.Nav-waiter-item {
+  margin-right: 40px;
+}
+
+.Nav-waiter__item--active {
+  border-bottom: 2px solid #FFCD05;
+  margin-right: 40px;
 }

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import NavWaiter from '../navBar/NavBarWaiter';
+import Data from '../../assets/data/menu.json';
+import NavBar from '../navBar/NavBar';
 import TypeMenu from '../menu/TypeMenu';
 import Footer from '../navBar/Footer';
-import Data from '../../assets/data/menu.json';
 
 // Components section order
 import ClientName from '../order/ClientName';
@@ -11,21 +11,23 @@ import OrderProduct from '../order/OrderProduct.js';
 import OrderTotal from '../order/OrderTotal.js';
 import OrderBtn from '../order/OrderBtn.js';
 
+// Styles
 import '../../styles/viewsCss/Waiter.css';
 import '../../styles/order/Order.css';
 
-//Cambiar nombre nuevo Pedido
+// Cambiar nombre nuevo Pedido
 export default function Waiter() {
+
   const [order, setOrder] = useState([]);
   const [client, setClient]=useState('');
   const [total, setTotal]= useState(0);
-  
 
   let objOrder = {
     name: client,
     uid: 'Waiter',
     products: order,
     totalOrder: total,
+    time: 0,
     sending: true,
     ready: false,
     delivery:false
@@ -33,21 +35,23 @@ export default function Waiter() {
 
   console.log(objOrder)
 
-  
+  const navWaiter = [
+    {route: '/waiter', name:'Nuevo Pedido'}, 
+    {route: '/orderState', name:'Pedidos Listos'}
+  ]
 
   useEffect(() => {
     setTotal(order.reduce((finalTotal, { total }) => finalTotal + total, 0))
-  },[order, setOrder])
-
+  }, [order, setOrder])
 
   return (
     <div className='Waiter'>
-      <NavWaiter />
+      <NavBar nav={navWaiter} />
 
       <div className='Waiter-section'>
         <section className='Menu-section'>
           <TypeMenu
-            data={Data.menu }
+            data={Data.menu}
             order={order}
             setOrder={setOrder} 
             />
@@ -72,12 +76,12 @@ export default function Waiter() {
           </div>
 
             <div className='Order-bottom'>
-              <OrderTotal total={total}/>
+              <OrderTotal total={total} />
 
               <OrderBtn  
-              objOrder={objOrder} 
-              setOrder={setOrder} 
-              setClient={setClient} 
+                objOrder={objOrder} 
+                setOrder={setOrder} 
+                setClient={setClient} 
               />
             </div>
           </div>

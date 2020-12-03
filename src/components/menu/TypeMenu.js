@@ -3,7 +3,7 @@ import Cards from '../menu/Cards';
 
 import '../../styles/menu/TypeMenu.css';
 
-export default function TypeMenu({ data, order, setOrder}) {
+export default function TypeMenu({ data, order, setOrder }) {
 
   const subMenuLunch = ['Burgers', 'Side-Orders','Drinks']
 

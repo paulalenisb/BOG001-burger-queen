@@ -6,6 +6,7 @@
     width: 40%;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
 }
 
 .Info-name-clock {
@@ -35,14 +36,17 @@
     color: #FFCD05;
     margin-right: 2%;
 }
+
 .Cooking-card-products, .Cooking-card-quantity {
     color: #E0052D;
     font-weight: bold;
 }
-.Cooking-card-products li, .Cooking-card-quantity li{
+
+.Cooking-card-products li, .Cooking-card-quantity li {
     color: #2b2929;
     font-weight: normal;
 }
+
 .Order-products {
     display: flex;
     justify-content: space-around;
@@ -56,12 +60,12 @@
 }
 
 .ready-btn {
-  border: 1px solid #E0052D;
-  border-radius: 20px;
-  width: 50%;
-  height: 10%;
-  font-size: 1em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: #E0052D;
-  color: white;
+    border: 1px solid #E0052D;
+    border-radius: 20px;
+    width: 50%;
+    height: 10%;
+    font-size: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: #E0052D;
+    color: white;
 }

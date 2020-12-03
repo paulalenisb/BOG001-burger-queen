@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import ReactDom from 'react-dom';
 
+// Styles
 import '../../styles/menu/BurgerModal.css';
 
 export default function BurgerModal({ data, showModal, setShowModal, product, setOrder, setMeatOptn, meatOptn, order }) {
