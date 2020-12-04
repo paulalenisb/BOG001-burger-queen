@@ -1,4 +1,4 @@
-<p align="center"> <img src="src/images/readme-img/banner_Leratto.png" width="1000"> </p>
+<!-- <p align="center"> <img src="src/images/readme-img/banner_Leratto.png" width="1000"> </p> -->
 # Burger Queen
 
 ## Índice
@@ -13,6 +13,7 @@
 ## 1. Definición del producto
 
 Creación de una interfaz que le facilite a los empleados del restaurente _Burger Queen_ poder tomar sus pedidos usando una _tablet_, y enviarlos a la cocina para que se preparen ordenada y eficientemente.
+
 ![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
 
 ### Menú 
@@ -44,7 +45,7 @@ La interfaz muestra dos menús (desayuno y resto del día), cada uno con todos s
 
 ## 2. Historia de usuarios
 
-#### [Historia de usuario 1] Mesero/a debe poder tomar pedido de cliente
+#### HU1 Mesero/a debe poder tomar pedido de cliente
 
 Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala
 memoria, para saber cuánto cobrar, y enviarlo a la cocina para evitar errores y
@@ -72,7 +73,7 @@ Lo acordado que debe ocurrir para decir que la historia está terminada.
 
 ***
 
-#### [Historia de usuario 2] Jefe de cocina debe ver los pedidos
+#### HU2 Jefe de cocina debe ver los pedidos
 
 Yo como jefx de cocina quiero ver los pedidos de los clientes en orden y
 marcar cuáles están listos para saber qué se debe cocinar y avisar a lxs meserxs
@@ -94,7 +95,7 @@ que un pedido está listo para servirlo a un cliente.
 
 ***
 
-#### [Historia de usuario 3] Meserx debe ver pedidos listos para servir
+#### HU3 Meserx debe ver pedidos listos para servir
 
 Yo como meserx quiero ver los pedidos que están preparados para entregarlos
 rápidamente a los clientes que las hicieron.
@@ -116,10 +117,10 @@ rápidamente a los clientes que las hicieron.
 ## 3. Prototipos
 
 #### Paleta de colores
-<p align="center"> <img src="src/images/readme-img/paletta_Leratto.png" width="500"> </p>
+<!-- <p align="center"> <img src="src/images/readme-img/paletta_Leratto.png" width="500"> </p> -->
 
 #### Protipo de baja
-<p align="center"> <img src="src/images/readme-img/Leratto_prototipo_baja.jpg" width="500" style="box-shadow: 5px 10px 8px #00000011"> </p>
+<!-- <p align="center"> <img src="src/images/readme-img/Leratto_prototipo_baja.jpg" width="500" style="box-shadow: 5px 10px 8px #00000011"> </p> -->
 
 #### Protipo de alta
 
