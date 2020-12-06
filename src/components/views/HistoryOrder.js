@@ -1,7 +1,6 @@
 import React,{ useEffect, useState} from 'react';
 import { gettingData } from '../../firebaseFunc';
-
-import CookingCard from '../cardState/CookingCard'
+import HistoryCard from '../cardState/historyCard';
 import NavBar from '../navBar/NavBar';
 import Footer from '../navBar/Footer';
 
@@ -30,8 +29,8 @@ import '../../styles/viewsCss/Kitchen.css';
         <NavBar nav={navKitchen}/>
 
         <div className='Kitchen'>
-          {orderMaked.filter((algo) =>  algo.delivery === true).map((order, index)=>(
-            <CookingCard order={order} index={index}/>
+          {orderMaked.filter((algo) =>  algo.delivery === true && algo.ready === true).map((order, index)=>(
+            <HistoryCard order={order} index={index}/>
           ))} 
         </div>
 

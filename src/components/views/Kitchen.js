@@ -21,15 +21,10 @@ import '../../styles/viewsCss/Kitchen.css';
     useEffect(()=>{
       gettingData('order').then((doc) => {
         const orders = doc.docs.map( doc => {
-          //Acá faltaria el Key
           return { id: doc.id, ...doc.data() }});
         setOrderMaked(orders)
       });
     }, []) //aqui van las que cosas que detenienen el useEffect, (aquí podría estar el error)
-
-//Si ready es false
-//ready es true
-//delivery true
     return (
       <div className="Kitchen-section">
         <NavBar nav={navKitchen}/>
@@ -39,7 +34,6 @@ import '../../styles/viewsCss/Kitchen.css';
             <CookingCard order={order} index={index}/>
           ))}
         </div>
-
         <Footer />
       </div>
     )

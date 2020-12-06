@@ -2,6 +2,7 @@ import React, {  useState, useEffect } from 'react';
 import NavBar from '../navBar/NavBar';
 import Footer from '../navBar/Footer';
 import { gettingData } from '../../firebaseFunc';
+import ReadyToDelivery from '../cardState/readyToDelivery'
 
 
 export default function  orderState() {
@@ -23,8 +24,8 @@ export default function  orderState() {
     return (
       <div>
         <NavBar nav={navWaiter} />
-        {delivery.filter((algo) =>  algo.delivery === false).map((deliveryOrder)=>(
-          <p>{deliveryOrder.id}</p>
+        {delivery.filter((algo) =>  algo.ready === true && algo.delivery===false).map((deliveryOrder, index)=>(
+          <ReadyToDelivery order={deliveryOrder} index={index}/>
         ))}
         <Footer />
       </div>

@@ -24,6 +24,7 @@ export default function CookingCard({ order, index }) {
     const readyOrder = true;
     const time = `${hours}h ${minutes}m ${seconds}s`
     updateData('order', order.id, time, readyOrder);
+    
   }
   
   return(

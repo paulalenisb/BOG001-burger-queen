@@ -24,19 +24,32 @@ async function gettingData(collection) {
 };
 
 //  -----------updateData------------
-async function updateData(collection, id, time, state) {
+async function updateData(collection, id, time, estado) {
 	try {
 		const dataUpdate = await db.collection(collection).doc(id)
 		const updateObj = dataUpdate.update({
 			time: time,
-			ready: state,
+			ready: estado,
 		});
 		return updateObj;
 	} catch (error) {
 		return error.message;
 	}
 };
-export {gettingData, updateData}
+
+async function updateDelivery(collection, id, estado) {
+	try {
+		const dataUpdate = await db.collection(collection).doc(id)
+		const updateObj = dataUpdate.update({
+			delivery:estado,
+		});
+		return updateObj;
+	} catch (error) {
+		return error.message;
+	}
+};
+
+export {gettingData, updateData, updateDelivery}
 
 /* export default async function gettingData(collection) {
 	try {
