@@ -70,7 +70,7 @@
 
 .Order-products {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 95%;
     height: 160px;
     overflow-y: scroll;
