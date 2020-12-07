@@ -29,7 +29,7 @@
       "submenu":"Burgers",
       "price": 10,
       "image": "assets/products/lunch-hamburguesa-sencilla-min.png",
-      "meat" : ["Res", "Pollo", "Vegetariana"],
+      "meat" : ["Res", "Pollo", "Veggie"],
       "toppings":{
         "Queso": 1,
         "Huevo": 1
@@ -40,7 +40,7 @@
       "submenu":"Burgers",
       "price": 15,
       "image": "assets/products/lunch-hamburguesa-doble-min.png",
-      "meat" : ["Res", "Pollo", "Vegetariana"],
+      "meat" : ["Res", "Pollo", "Veggie"],
       "toppings":{
         "Queso": 1,
         "Huevo": 1
@@ -70,13 +70,13 @@
       "price": 7,
       "image": "assets/products/lunch-bebidas-agua-min.png"
     },
-    "Bebida/gasesosa 500ml":{
+    "Gasesosa 500ml":{
       "type": "Lunch-Dinner",
       "submenu":"Drinks",
       "price": 7,
       "image": "assets/products/lunch-bebidas-gaseosa-coca-min.png"
     },
-    "Bebida/gasesosa 750ml":{
+    "Gasesosa 750ml":{
       "type": "Lunch-Dinner",
       "submenu":"Drinks",
       "price": 10,
