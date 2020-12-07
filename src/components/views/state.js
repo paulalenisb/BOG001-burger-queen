@@ -9,26 +9,29 @@ export default function  orderState() {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [delivery, setDelivery]= useState([])
     const navWaiter = [
-      {route: '/waiter', name:'Nuevo Pedido'}, 
+      {route: '/waiter', name:'Nuevo Pedido'},
       {route: '/orderState', name:'Pedidos Listos'}
     ]
-      
+
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(()=>{
       gettingData('order').then((doc) => {
         const orders = doc.docs.map(doc=>{ return { id: doc.id, ...doc.data()}});
         setDelivery(orders)
-      }); 
+      });
     }, [])
     console.log(delivery)
     return (
-      <div>
+      <div className="Kitchen-section">
         <NavBar nav={navWaiter} />
-        {delivery.filter((algo) =>  algo.ready === true && algo.delivery===false).map((deliveryOrder, index)=>(
-          <ReadyToDelivery order={deliveryOrder} index={index}/>
-        ))}
+
+        <div className='Kitchen'>
+          {delivery.filter((algo) =>  algo.ready === true && algo.delivery===false).map((deliveryOrder, index)=>(
+            <ReadyToDelivery order={deliveryOrder} index={index}/>
+          ))}
+        </div>
+
         <Footer />
       </div>
     )
   };
-  
