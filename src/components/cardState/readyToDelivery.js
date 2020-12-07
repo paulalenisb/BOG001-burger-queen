@@ -1,9 +1,8 @@
 import React from 'react';
 import { updateDelivery } from '../../firebaseFunc';
 
-
 // Styles
-import '../../styles/cardState/ReadyToDelivery.css'
+import '../../styles/cardState/CookingCard.css'
 
 export default function ReadyToDelivery({ order, index }) {
 

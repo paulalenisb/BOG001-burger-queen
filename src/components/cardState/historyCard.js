@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Styles
-import '../../styles/cardState/ReadyToDelivery.css'
+import '../../styles/cardState/CookingCard.css'
 
 export default function HistoryCard({ order, index }) {
 
