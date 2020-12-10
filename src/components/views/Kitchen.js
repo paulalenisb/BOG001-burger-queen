@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { gettingData } from '../../firebaseFunc';
-
+import { snapshotGettingData } from '../../firebaseFunc';
 import CookingCard from '../cardState/CookingCard'
 import NavBar from '../navBar/NavBar';
 import Footer from '../navBar/Footer';
@@ -19,11 +18,13 @@ import '../../styles/viewsCss/Kitchen.css';
 
     //Todo useEffect sucede despues del return
     useEffect(()=>{
-      gettingData('order').then((doc) => {
+      const arrayData = [];
+      snapshotGettingData('order', arrayData, setOrderMaked);
+     /*  gettingData('order').then((doc) => {
         const orders = doc.docs.map( doc => {
           return { id: doc.id, ...doc.data() }});
         setOrderMaked(orders)
-      });
+      }); */
     }, []) //aqui van las que cosas que detenienen el useEffect, (aquí podría estar el error)
     return (
       <div className="Kitchen-section">
@@ -31,7 +32,7 @@ import '../../styles/viewsCss/Kitchen.css';
 
         <div className='Kitchen'>
           {orderMaked.filter((algo) => algo.ready === false).map((order, index)=> (
-            <CookingCard order={order} index={index}/>
+            <CookingCard order={order} index={index} key={index + 'cookingCard'} setOrderMaked={setOrderMaked} />
           ))}
         </div>
         <Footer />

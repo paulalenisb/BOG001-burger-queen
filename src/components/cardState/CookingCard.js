@@ -5,7 +5,7 @@ import { updateData } from '../../firebaseFunc';
 // Styles
 import '../../styles/cardState/CookingCard.css'
 
-export default function CookingCard({ order, index }) {
+export default function CookingCard({ order, index, setOrderMaked }) {
   const [time, setTime] = useState(0);
   //update
   const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -24,7 +24,6 @@ export default function CookingCard({ order, index }) {
     const readyOrder = true;
     const time = `${hours}h ${minutes}m ${seconds}s`
     updateData('order', order.id, time, readyOrder);
-
   }
 
   return(

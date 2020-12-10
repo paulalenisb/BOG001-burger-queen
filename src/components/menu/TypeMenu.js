@@ -21,7 +21,6 @@ export default function TypeMenu({ data, order, setOrder }) {
     return data[productKey].submenu === subMenu // Arr Lunch
   }))
 
-
   return (
     <div className='Menu-section-container'>
 

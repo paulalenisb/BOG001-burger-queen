@@ -1,17 +1,6 @@
 import firebase from 'firebase/app';
-//import db from './firebaseConfig'
 import 'firebase/firestore'
 
-
-//  -----------gettingDataOrderByCondition------------
-/* async function gettingDataOrdered(collection, param, asds) {
-	try {
-		const dataPost = await db.collection(collection).orderBy(param, asds).get();
-		return dataPost;
-	} catch (error) {
-		return error.message;
-	}
-}; */
 const db = firebase.firestore();
 //  -----------gettingData------------
 async function gettingData(collection) {
@@ -49,22 +38,20 @@ async function updateDelivery(collection, id, estado) {
 	}
 };
 
-export {gettingData, updateData, updateDelivery}
-
-/* export default async function gettingData(collection) {
-	try {
-		const orderData = await db.collection(collection).onSnapshot((querySnapshot) =>{
-			const arrayData = querySnapshot.map((doc) => {
-				const data = doc.data()
-				return {...data, idDoc: doc.id}
-			});
-			return arrayData;
+ function snapshotGettingData(collection, arrayData, setState) {
+	db.collection(collection).onSnapshot((querySnapshot) =>{
+		
+		querySnapshot.forEach((doc) => {
+			const data = doc.data()
+			arrayData.push({...data, idDoc: doc.id})
 		});
-		return orderData;
-	} catch (error) {
-		return error.message;
-	}
-}; */
+		return setState(arrayData);
+	});
+};
+
+export {gettingData, updateData, updateDelivery, snapshotGettingData}
+
+
 
 //const onGetPosts = (callback) => db.collection('review').orderBy('date', 'desc').onSnapshot(callback);
 // export const getPosts = () => db.collection('review').get();

@@ -1,5 +1,5 @@
 import React,{ useEffect, useState} from 'react';
-import { gettingData } from '../../firebaseFunc';
+import { snapshotGettingData } from '../../firebaseFunc';
 import HistoryCard from '../cardState/historyCard';
 import NavBar from '../navBar/NavBar';
 import Footer from '../navBar/Footer';
@@ -18,10 +18,12 @@ import '../../styles/viewsCss/Kitchen.css';
     
     //Todo useEffect sucede despues del return 
     useEffect(()=>{
-      gettingData('order').then((doc) => {
+      const arrayData = [];
+      snapshotGettingData('order', arrayData, setOrderMaked);
+      /* gettingData('order').then((doc) => {
         const orders = doc.docs.map(doc=>{ return { id: doc.id, ...doc.data()}});
         setOrderMaked(orders)
-      }); 
+      });  */
     }, []) 
     
     return (
@@ -30,7 +32,7 @@ import '../../styles/viewsCss/Kitchen.css';
 
         <div className='Kitchen'>
           {orderMaked.filter((algo) =>  algo.delivery === true && algo.ready === true).map((order, index)=>(
-            <HistoryCard order={order} index={index}/>
+            <HistoryCard order={order} index={index} key={index+'readyToDelivery'}/>
           ))} 
         </div>
 

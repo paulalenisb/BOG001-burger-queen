@@ -4,8 +4,9 @@ import React from 'react';
 import '../../styles/cardState/CookingCard.css'
 
 export default function HistoryCard({ order, index }) {
-
-    console.log(order.date.toDate())
+  const day = order.date.toDate().getDate();
+  const month = order.date.toDate().getMonth();
+   const year = order.date.toDate().getFullYear();
   return(
     <div className='Cooking-card' key={index+'readyToDelivery'}>
         <div className='Info-name-clock'>
@@ -15,7 +16,7 @@ export default function HistoryCard({ order, index }) {
           </div>
           <div className='Cooking-time'>
             <i className="far fa-calendar-check"></i>
-            <p>{ `12/12/2020` }</p>
+            <p>{ `${day}/${month+1}/${year}` }</p>
           </div>
         </div>
 
