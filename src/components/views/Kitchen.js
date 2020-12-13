@@ -26,12 +26,13 @@ import '../../styles/viewsCss/Kitchen.css';
         setOrderMaked(orders)
       }); */
     }, []) //aqui van las que cosas que detenienen el useEffect, (aquí podría estar el error)
+    console.log(orderMaked)
     return (
       <div className="Kitchen-section">
         <NavBar nav={navKitchen}/>
 
         <div className='Kitchen'>
-          {orderMaked.filter((algo) => algo.ready === false).map((order, index)=> (
+          {orderMaked.filter((products) => products.ready === false).map((order, index)=> (
             <CookingCard order={order} index={index} key={index + 'cookingCard'} setOrderMaked={setOrderMaked} />
           ))}
         </div>

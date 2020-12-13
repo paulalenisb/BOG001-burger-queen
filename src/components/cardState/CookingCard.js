@@ -23,7 +23,8 @@ export default function CookingCard({ order, index, setOrderMaked }) {
   const handleStop = () => {
     const readyOrder = true;
     const time = `${hours}h ${minutes}m ${seconds}s`
-    updateData('order', order.id, time, readyOrder);
+    updateData('order', order.idDoc, time, readyOrder);
+    //setOrderMaked([]);
   }
 
   return(

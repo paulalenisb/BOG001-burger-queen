@@ -8,7 +8,7 @@ export default function ReadyToDelivery({ order, index }) {
 
   const handleStop = () => {
     const readyTo = true
-    updateDelivery('order', order.id, readyTo);
+    updateDelivery('order', order.idDoc, readyTo);
   }
 
   return(
