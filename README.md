@@ -1,4 +1,5 @@
 <p align="center"> <img src="src/assets/images/Banner_BQ.png" width="1000"> </p>
+
 # Burger Queen
 
 ## Índice
@@ -9,11 +10,10 @@
 * [4. Solución final](#4-solución-final)
 * [4. Objetivos de aprendizaje](#4-objetivos-de-aprendizaje)
 
-***
 
 ## 1. Definición del producto
 
-Creación de una interfaz que le facilite a los empleados del restaurente _Burger Queen_ poder tomar sus pedidos usando una _tablet_, y enviarlos a la cocina para que se preparen ordenada y eficientemente.
+Creación de una interfaz que le facilite a los empleados del restaurante _Burger Queen_ poder tomar sus pedidos usando una _tablet_, y enviarlos a la cocina para que se preparen ordenada y eficientemente.
 
 ### Menú
 >
