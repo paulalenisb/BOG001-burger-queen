@@ -34,7 +34,7 @@ de gran ayuda para implementar rápidamente características de los proyectos en
 los que trabajes.
 
 ## 2. Resumen del proyecto
-
+<p align="center"> <img src="src/assets/images/BQGif.gif" width="1000" > </p>
 Esta vez tenemos un proyecto 100% por encargo. Si bien siempre puedes (y debes)
 hacer sugerencias de mejoras y/o cambios, muchas veces trabajarás en proyectos
 en los que primero hay que asegurarse de cumplir con lo requerido.

@@ -33,8 +33,6 @@ export default function Waiter() {
     delivery:false
   } 
 
-  console.log(objOrder)
-
   const navWaiter = [
     {route: '/waiter', name:'Nuevo Pedido'}, 
     {route: '/orderState', name:'Pedidos Listos'}

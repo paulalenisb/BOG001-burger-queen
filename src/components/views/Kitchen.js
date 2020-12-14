@@ -26,7 +26,6 @@ import '../../styles/viewsCss/Kitchen.css';
         setOrderMaked(orders)
       }); */
     }, []) //aqui van las que cosas que detenienen el useEffect, (aquí podría estar el error)
-    console.log(orderMaked)
     return (
       <div className="Kitchen-section">
         <NavBar nav={navKitchen}/>

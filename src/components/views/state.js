@@ -22,7 +22,6 @@ export default function  orderState() {
         setDelivery(orders)
       }); */
     }, [])
-    console.log(delivery)
     return (
       <div className="Kitchen-section">
         <NavBar nav={navWaiter} />
