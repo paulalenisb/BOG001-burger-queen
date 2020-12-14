@@ -8,7 +8,7 @@
 * [2. Historia de usuarios](#2-historia-de-usuarios)
 * [3. Prototipos](#3-prototipos)
 * [4. Solución final](#4-solución-final)
-* [4. Objetivos de aprendizaje](#4-objetivos-de-aprendizaje)
+* [5. Objetivos de aprendizaje](#5-objetivos-de-aprendizaje)
 
 
 ## 1. Definición del producto
