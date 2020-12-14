@@ -4,16 +4,16 @@
 
 ## Índice
 
-* [1. Definición del producto](#1-definición-del-producto)
+* [1. Definición de la necesidad](#1-definición-de-la-necesidad)
 * [2. Historia de usuarios](#2-historia-de-usuarios)
 * [3. Prototipos](#3-prototipos)
 * [4. Solución final](#4-solución-final)
 * [5. Objetivos de aprendizaje](#5-objetivos-de-aprendizaje)
 
 
-## 1. Definición del producto
+## 1. Definición de la necesidad
 
-Creación de una interfaz que le facilite a los empleados del restaurante _Burger Queen_ poder tomar sus pedidos usando una _tablet_, y enviarlos a la cocina para que se preparen ordenada y eficientemente.
+Mejorar la interfaz que genera los pedidos del restaurante _Burger Queen_ por una que le facilite a sus empleados tomar sus pedidos usando una _tablet_, y enviarlos a la cocina para que se preparen ordenada y eficientemente.
 
 ### Menú
 >
@@ -40,6 +40,7 @@ Creación de una interfaz que le facilite a los empleados del restaurante _Burge
 > |Bebida/gaseosa 500ml       |     7|
 > |Bebida/gaseosa 750ml       |     10|
 
+![out](https://user-images.githubusercontent.com/110297/45984241-b8b51c00-c025-11e8-8fa4-a390016bee9d.gif)
 La interfaz muestra dos menús (desayuno y resto del día), cada uno con todos sus _productos_. Los usuarios tienen la oportunidad de ir eligiendo qué _productos_ agregar y la interfaz va mostrando el _resumen del pedido_ con el costo total.
 
 ## 2. Historia de usuarios
