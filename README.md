@@ -1,4 +1,4 @@
-<!-- <p align="center"> <img src="src/images/readme-img/banner_Leratto.png" width="1000"> </p> -->
+<p align="center"> <img src="src/assets/images/Banner_BQ.png" width="1000"> </p>
 # Burger Queen
 
 ## Índice
@@ -6,6 +6,7 @@
 * [1. Definición del producto](#1-definición-del-producto)
 * [2. Historia de usuarios](#2-historia-de-usuarios)
 * [3. Prototipos](#3-prototipos)
+* [4. Solución final](#4-solución-final)
 * [4. Objetivos de aprendizaje](#4-objetivos-de-aprendizaje)
 
 ***
@@ -13,12 +14,8 @@
 ## 1. Definición del producto
 
 Creación de una interfaz que le facilite a los empleados del restaurente _Burger Queen_ poder tomar sus pedidos usando una _tablet_, y enviarlos a la cocina para que se preparen ordenada y eficientemente.
-<p align="center"> <img src="src/assets/images/BQGif.gif" width="1000" > </p>
 
-
-![burger-queen](https://user-images.githubusercontent.com/110297/42118136-996b4a52-7bc6-11e8-8a03-ada078754715.jpg)
-
-### Menú 
+### Menú
 >
 > | Ítem                      |Precio $|
 > |---------------------------|------|
@@ -118,15 +115,19 @@ rápidamente a los clientes que las hicieron.
 
 ## 3. Prototipos
 
-#### Paleta de colores
-<!-- <p align="center"> <img src="src/images/readme-img/paletta_Leratto.png" width="500"> </p> -->
-
 #### Protipo de baja
-<!-- <p align="center"> <img src="src/images/readme-img/Leratto_prototipo_baja.jpg" width="500" style="box-shadow: 5px 10px 8px #00000011"> </p> -->
+
+<p align="center"> <img src="src/assets/images/PrototipoBaja_BQ2.png" width="350" style="margin:10px"> <img style="margin:10px" src="src/assets/images/PrototipoBaja_BQ3.png" width="300"> </p>
 
 #### Protipo de alta
+<p align="center"> <img src="src/assets/images/PrototipoAlta_Home.png" width="300" style="margin:10px"> <img style="margin:10px" src="src/assets/images/PrototipoAlta_Desayuno.png" width="300">
+<img src="src/assets/images/PrototipoAlta_Lunch.png" width="300" style="margin:10px"> <img style="margin:10px" src="src/assets/images/PrototipoAlta_Modal.png" width="300"> <img src="src/assets/images/PrototipoAlta_Kitchen.png" width="300" style="margin:10px"> <img style="margin:10px" src="src/assets/images/PrototipoAlta_Kitchen2.png" width="300"> </p>
 
-## 4. Objetivos de aprendizaje
+
+## 4. Solución final
+<p align="center"> <img src="src/assets/images/BQGif.gif" width="1000" > </p>
+
+## 5. Objetivos de aprendizaje
 
 
 ### HTML y CSS
@@ -157,7 +158,7 @@ rápidamente a los clientes que las hicieron.
 ### Estructura del código y guía de estilo
 
 * [x] Organizar y dividir el código en módulos (Modularización)
-* [x] Uso de identificadores descriptivos (Nomenclatura | Semántica) // Pau y Ani sí, Aleja sigue usando Algo en todo. 
+* [x] Uso de identificadores descriptivos (Nomenclatura | Semántica) // Pau y Ani sí, Aleja sigue usando Algo en todo.
 * [x] Uso de linter (ESLINT) 💔
 
 ### Git y Github
