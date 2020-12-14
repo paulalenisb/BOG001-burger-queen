@@ -1,0 +1,84 @@
+.Overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.582);
+  backdrop-filter: blur(4px);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.Modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 450px;
+  height: 400px;
+  background-color: white;
+  z-index: 1000;
+  border-radius: 30px;
+}
+
+
+.Modal-title{
+  margin:0;
+  font-size: 1.3em;
+  font-weight: 700;
+  color:#E0052D;
+  text-align: center;
+  width: 80%;
+}
+
+.Btn-cancel{
+  justify-self: flex-end;
+  border: none;
+  background-color: #FFCD05;
+  border-radius: 50%;
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  line-height: 16px;
+  margin:2% 0 0 85%;
+  /* align-items: center;
+	text-align: center; */
+  /* transition: .3s ease all; */
+}
+
+i{
+  color: white;
+}
+
+.option-meat, .option-toppings {
+  display: flex;
+  width:90%;
+  justify-content: space-around;
+  margin: 2% 0 4% 0;
+}
+
+.Modal-toppings-title{
+  margin:0;
+  font-size: 1.1em;
+  font-weight: 700;
+  color:#E0052D;
+  text-align: center;
+  width: 80%;
+}
+
+.Modal-add-btn{
+  border: 1px solid #E0052D;
+  border-radius: 20px;
+  width: 70%;
+  height: 10%;
+  font-size: 1.2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #E0052D;
+  color: white;
+}

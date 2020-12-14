@@ -1,0 +1,26 @@
+.Type-menu {
+  width: 85%;
+  height: 40px;
+  display: flex;
+}
+
+.Type-menu button {
+  width: 50%;
+  border: 2px solid #E0052D;
+  font-size: 1.2em;
+}
+
+.Menu-breakfast {
+  border-radius: 20px 0 0 20px;
+  color: #E0052D;
+}
+
+.Menu-other {
+  border-radius: 0 20px 20px 0;
+  color: #E0052D;
+}
+
+.Menu-active {
+  background-color: #E0052D;
+  color:white;
+}

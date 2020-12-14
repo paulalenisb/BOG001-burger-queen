@@ -1,0 +1,19 @@
+.Kitchen-section{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    background-color: #F6F6F6;
+}
+
+.Kitchen {
+    width: 90%;
+    height: 85%;
+    overflow-y: scroll;
+    /* background-color: aquamarine; */
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-around; 
+}

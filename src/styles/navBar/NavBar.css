@@ -1,0 +1,55 @@
+a:link, a:visited, a:active {
+  text-decoration:none;
+  color: white;
+}
+
+.Header-nav-waiter {
+  width: 100vw;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  background-color: #E0052D;
+  font-size: 1.4em;
+  color: white; /* ¿Blanco? */
+}
+
+.Nav-container-left {
+  width: 65%;
+  display: flex;
+  justify-content: center;
+}
+
+.Nav-waiter { /* Sections items in waiter*/
+  width: 85%;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+
+.Nav-home-icon {
+  width: 35px;
+  height: auto;
+  /* stroke-width: 30px ;
+  fill: #E0052D; */
+}
+
+.Nav-container-right {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+}
+
+.Nav-waiter-logo {
+  width: auto;
+  height: 50px;
+}
+
+.Nav-waiter-item {
+  margin-right: 40px;
+}
+
+.Nav-waiter__item--active {
+  border-bottom: 2px solid #FFCD05;
+  margin-right: 40px;
+}

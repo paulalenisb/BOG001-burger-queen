@@ -1,0 +1,86 @@
+{
+  "menu":{
+    "Café americano":{
+      "type": "Breakfast",
+      "submenu":"",
+      "price": 5,
+      "image": "assets/products/breakfast-cafe-americano-min.png"
+    },
+    "Café con leche":{
+      "type": "Breakfast",
+      "submenu":"",
+      "price": 7,
+      "image": "assets/products/breakfast-cafe-leche-min.png"
+    },
+    "Sandwich jamón y queso":{
+      "type": "Breakfast",
+      "submenu":"",
+      "price": 10,
+      "image":"assets/products/breakfast-sandwich-min.png"
+    },
+    "Jugo de frutas":{
+      "type": "Breakfast",
+      "submenu":"",
+      "price": 7,
+      "image":"assets/products/breakfast-jugo-frutas-min.png"
+    },
+    "Hamburguesa sencilla":{
+      "type": "Lunch-Dinner",
+      "submenu":"Burgers",
+      "price": 10,
+      "image": "assets/products/lunch-hamburguesa-sencilla-min.png",
+      "meat" : ["Res", "Pollo", "Veggie"],
+      "toppings":{
+        "Queso": 1,
+        "Huevo": 1
+      }
+    },
+    "Hamburguesa doble":{
+      "type": "Lunch-Dinner",
+      "submenu":"Burgers",
+      "price": 15,
+      "image": "assets/products/lunch-hamburguesa-doble-min.png",
+      "meat" : ["Res", "Pollo", "Veggie"],
+      "toppings":{
+        "Queso": 1,
+        "Huevo": 1
+      }
+    },
+    "Papas fritas":{
+      "type": "Lunch-Dinner",
+      "submenu":"Side-Orders",
+      "price": 5,
+      "image": "assets/products/lunch-acomp-papas-min.png"
+    },
+    "Aros de cebolla":{
+      "type": "Lunch-Dinner",
+      "submenu":"Side-Orders",
+      "price": 5,
+      "image": "assets/products/lunch-acomp-aros-min.png"
+    },
+    "Agua 500ml":{
+      "type": "Lunch-Dinner",
+      "submenu":"Drinks",
+      "price": 5,
+      "image": "assets/products/lunch-bebidas-agua-min.png"
+    },
+    "Agua 750ml":{
+      "type": "Lunch-Dinner",
+      "submenu":"Drinks",
+      "price": 7,
+      "image": "assets/products/lunch-bebidas-agua-min.png"
+    },
+    "Gasesosa 500ml":{
+      "type": "Lunch-Dinner",
+      "submenu":"Drinks",
+      "price": 7,
+      "image": "assets/products/lunch-bebidas-gaseosa-coca-min.png"
+    },
+    "Gasesosa 750ml":{
+      "type": "Lunch-Dinner",
+      "submenu":"Drinks",
+      "price": 10,
+      "image": "assets/products/lunch-bebidas-gaseosa-vaso-min.png"
+    }
+  }
+}

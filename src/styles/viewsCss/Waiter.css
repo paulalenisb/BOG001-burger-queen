@@ -1,0 +1,39 @@
+ul {
+  padding: 0; /* Eliminar padding-left 40 */
+}
+
+.Waiter-section{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.Menu-section { /* Sería mejor fixed? Y position según header/footer?*/
+  width: 65%;
+  height: 100%;
+  background-color: #F6F6F6;
+}
+
+.Menu-section-container { /* NO VA EN ESTE CSS */
+  width: 100%;
+  margin-top: 80px; /* NO DEBERÍA SER FIJO!*/
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontal */
+}
+
+.Order-section {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Horizontal*/
+}
+
+.Order-products-container{
+  width: 100%;
+  height: 600px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

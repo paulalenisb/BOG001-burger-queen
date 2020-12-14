@@ -1,0 +1,21 @@
+.Order-btn-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.Cancel-order-btn, .Add-order-btn{
+  border: 1px solid #E0052D;
+  border-radius: 20px;
+  width: 140px;
+  height: 40px;
+  font-size: 1.3em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3),
+}
+
+.Add-order-btn{
+  background-color: #E0052D;
+  color: aliceblue;
+}
+

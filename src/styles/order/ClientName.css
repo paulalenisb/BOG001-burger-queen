@@ -1,0 +1,11 @@
+.Client-name{
+  color:#E0052D;
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+.Client-input{
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #FFCD05;
+}
