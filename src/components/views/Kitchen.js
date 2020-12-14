@@ -20,7 +20,7 @@ import '../../styles/viewsCss/Kitchen.css';
     useEffect(()=>{
       const arrayData = [];
       snapshotGettingData('order', arrayData, setOrderMaked);
-     /*  gettingData('order').then((doc) => {
+    /*  gettingData('order').then((doc) => {
         const orders = doc.docs.map( doc => {
           return { id: doc.id, ...doc.data() }});
         setOrderMaked(orders)

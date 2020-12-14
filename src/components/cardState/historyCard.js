@@ -6,7 +6,8 @@ import '../../styles/cardState/CookingCard.css'
 export default function HistoryCard({ order, index }) {
   const day = order.date.toDate().getDate();
   const month = order.date.toDate().getMonth();
-   const year = order.date.toDate().getFullYear();
+  const year = order.date.toDate().getFullYear();
+  
   return(
     <div className='Cooking-card' key={index+'readyToDelivery'}>
         <div className='Info-name-clock'>

@@ -56,7 +56,7 @@ export default function CookingCard({ order, index, setOrderMaked }) {
         </ul>
       </div>
 
-      <button className= 'ready-btn'onClick={()=>handleStop() }>¡Listo!</button>
+      <button className= 'ready-btn'onClick={() => handleStop() }>¡Listo!</button>
     </div>
   )
 }
