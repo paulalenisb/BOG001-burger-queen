@@ -34,7 +34,7 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
 
               <div className='option-meat'>
                 {meatOptions.map((meat, index) => (
-                  <label key={index + 'meatOptions'}>
+                  <label key={`${index}meatOptions`}>
                     <input
                       type='radio'
                       name={meat}
@@ -51,7 +51,7 @@ export default function BurgerModal({ data, showModal, setShowModal, product, se
               <div className='option-toppings'>
 
                 {toppingsOptions.map((toppings, index) => (
-                  <label key={index + 'toppingsOptions'}>
+                  <label key={`${index}toppingsOptions`}>
                     <input
                       type='checkbox'
                       name={toppings}

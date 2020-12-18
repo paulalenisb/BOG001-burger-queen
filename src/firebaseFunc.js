@@ -26,6 +26,7 @@ async function updateData(collection, id, time, estado) {
 	}
 };
 
+
 async function updateDelivery(collection, id, estado) {
 	try {
 		const dataUpdate = await db.collection(collection).doc(id)

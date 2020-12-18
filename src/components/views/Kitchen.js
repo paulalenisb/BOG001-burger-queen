@@ -10,6 +10,7 @@ import '../../styles/viewsCss/Kitchen.css';
   export default function Kitchen() {
 
     const [orderMaked, setOrderMaked]= useState([]);
+    const [ready, setReady] = useState(false);
 
     const navKitchen = [
       {route: '/Kitchen', name:'Pedidos'},
@@ -18,21 +19,18 @@ import '../../styles/viewsCss/Kitchen.css';
 
     //Todo useEffect sucede despues del return
     useEffect(()=>{
+      setReady(false)
       const arrayData = [];
       snapshotGettingData('order', arrayData, setOrderMaked);
-    /*  gettingData('order').then((doc) => {
-        const orders = doc.docs.map( doc => {
-          return { id: doc.id, ...doc.data() }});
-        setOrderMaked(orders)
-      }); */
-    }, []) //aqui van las que cosas que detenienen el useEffect, (aquí podría estar el error)
+    }, [ready, setReady]) //aqui van las que cosas que hacen iterar el useEffect
+    
     return (
       <div className="Kitchen-section">
         <NavBar nav={navKitchen}/>
 
         <div className='Kitchen'>
           {orderMaked.filter((products) => products.ready === false).map((order, index)=> (
-            <CookingCard order={order} index={index} key={index + 'cookingCard'} setOrderMaked={setOrderMaked} />
+            <CookingCard order={order} index={index} key={`${index}cookingCard`} setReady={setReady} />
           ))}
         </div>
         <Footer />

@@ -15,7 +15,6 @@ import OrderBtn from '../order/OrderBtn.js';
 import '../../styles/viewsCss/Waiter.css';
 import '../../styles/order/Order.css';
 
-// Cambiar nombre nuevo Pedido
 export default function Waiter() {
 
   const [order, setOrder] = useState([]);
@@ -63,7 +62,7 @@ export default function Waiter() {
           <div className='Order-products-container'>
             {order.map((product, index) => (
               <OrderProduct
-                key={index + 'orderProduct'}
+                key={`${index}orderProduct`}
                 product={product}
                 index={index}
                 order={order}
