@@ -1,8 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
 import Logo from '../../assets/images/Logo-BQ.png';
 import Home from '../../assets/svg/Home.svg';
+
+// Styles
 import '../../styles/navBar/NavBar.css';
 
 export default function NavBar({ nav }) {

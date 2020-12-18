@@ -4,12 +4,12 @@ import { updateDelivery } from '../../firebaseFunc';
 // Styles
 import '../../styles/cardState/CookingCard.css'
 
-export default function ReadyToDelivery({ order, index, setHandin }) {
+export default function ReadyToDelivery({ order, index, setHanding }) {
 
   const handleStop = () => {
     const readyTo = true
     updateDelivery('order', order.idDoc, readyTo);
-    setHandin(true)
+    setHanding(true)
   }
 
   return(

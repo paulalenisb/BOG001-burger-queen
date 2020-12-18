@@ -32,7 +32,10 @@ import '../../styles/viewsCss/Kitchen.css';
 
         <div className='Kitchen'>
           {orderMaked.filter((algo) =>  algo.delivery === true && algo.ready === true).map((order, index)=>(
-            <HistoryCard order={order} index={index} key={index+'readyToDelivery'}/>
+            <HistoryCard 
+              order={order} 
+              index={index} 
+              key={`${index}readyToDelivery`}/>
           ))} 
         </div>
 

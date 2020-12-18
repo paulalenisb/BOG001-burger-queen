@@ -1,9 +1,9 @@
 import React from 'react';
 
+// Styles
 import '../../styles/order/OrderProduct.css';
 
 export default function OrderProduct({ product, index, order, setOrder }) {
-
   const changeQuantity = (index, originalOrder, num ) =>{
     const copyOrder = [...originalOrder];
     copyOrder[index].quantity += num;

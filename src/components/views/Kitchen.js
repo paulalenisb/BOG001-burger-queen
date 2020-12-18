@@ -30,7 +30,11 @@ import '../../styles/viewsCss/Kitchen.css';
 
         <div className='Kitchen'>
           {orderMaked.filter((products) => products.ready === false).map((order, index)=> (
-            <CookingCard order={order} index={index} key={`${index}cookingCard`} setReady={setReady} />
+            <CookingCard 
+              order={order} 
+              index={index} 
+              key={`${index}cookingCard`} 
+              setReady={setReady} />
           ))}
         </div>
         <Footer />

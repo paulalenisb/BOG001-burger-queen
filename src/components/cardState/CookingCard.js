@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { updateData } from '../../firebaseFunc';
 
-
 // Styles
 import '../../styles/cardState/CookingCard.css'
 

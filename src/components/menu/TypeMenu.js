@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Cards from '../menu/Cards';
 
+// Styles
 import '../../styles/menu/TypeMenu.css';
 
 export default function TypeMenu({ data, order, setOrder }) {

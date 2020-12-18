@@ -1,10 +1,10 @@
 import React from 'react';
 import newOrder from '../../firebaseConfig.js'
 
+// Styles
 import '../../styles/order/OrderBtn.css';
 
 export default function OrderBtn({objOrder, setOrder, setClient}) {
-
   const closeAll = ()=>{
     setOrder([]);
     setClient('');

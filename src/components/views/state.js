@@ -9,24 +9,28 @@ import ReadyToDelivery from '../cardState/readyToDelivery'
 export default function  orderState() {
     
     const [delivery, setDelivery]= useState([])
-    const [handin, setHandin] = useState (false)
+    const [handing, setHanding] = useState (false)
     const navWaiter = [
       {route: '/waiter', name:'Nuevo Pedido'},
       {route: '/orderState', name:'Pedidos Listos'}
     ]
 
     useEffect(()=>{
-      setHandin(false)
+      setHanding(false)
       const arrayData =[];
       snapshotGettingData('order', arrayData, setDelivery);
-    }, [handin, setHandin])
+    }, [handing, setHanding])
     return (
       <div className="Kitchen-section">
         <NavBar nav={navWaiter} />
 
         <div className='Kitchen'>
-          {delivery.filter((algo) =>  algo.ready === true && algo.delivery===false).map((deliveryOrder, index)=>(
-            <ReadyToDelivery order={deliveryOrder} index={index} key={index + 'readyToDelivery'} setHandin={setHandin}/>
+          {delivery.filter((orderWaiter) => orderWaiter.ready === true && orderWaiter.delivery===false).map((deliveryOrder, index)=>(
+            <ReadyToDelivery 
+              order={deliveryOrder} 
+              index={index} 
+              key={`${index}readyToDelivery`} 
+              setHanding={setHanding}/>
           ))}
         </div>
         <Footer />

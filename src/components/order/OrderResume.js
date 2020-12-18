@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Styles
 import '../../styles/order/OrderResume.css';
 
 export default function OrderResume() {
