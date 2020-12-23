@@ -13,19 +13,19 @@ export default function NavBar({ nav }) {
       <div className='Nav-container-left'>
         <div className="Nav-waiter">
         <NavLink
-            className='Nav-waiter-item'
-            to= "/">
-              <img src={Home} className='Nav-home-icon' alt='Icon Home'/>
+          className='Nav-waiter-item'
+          to= "/">
+            <img src={Home} className='Nav-home-icon' alt='Icon Home'/>
           </NavLink>
 
           { 
             nav.map((view, idx) => 
               <NavLink 
-                key ={`${idx} menu`}
+                key={`${idx} menu`}
                 className='Nav-waiter-item'
                 activeClassName='Nav-waiter__item--active'
-                to= {view.route}>
-                {view.name}
+                to={view.route}>
+                  {view.name}
               </NavLink>
           )}
         </div>

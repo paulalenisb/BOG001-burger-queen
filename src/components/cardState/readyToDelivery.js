@@ -7,12 +7,12 @@ import '../../styles/cardState/CookingCard.css'
 export default function ReadyToDelivery({ order, index, setHanding }) {
 
   const handleStop = () => {
-    const readyTo = true
+    const readyTo = true;
     updateDelivery('order', order.idDoc, readyTo);
-    setHanding(true)
+    setHanding(true);
   }
 
-  return(
+  return (
     <div className='Cooking-card' key={index+'readyToDelivery'}>
         <div className='Info-name-clock'>
           <div className='Name-client'>
@@ -48,7 +48,7 @@ export default function ReadyToDelivery({ order, index, setHanding }) {
         </ul>
       </div>
 
-      <button className= 'ready-btn'onClick={()=>handleStop() }>Entregar</button>
+      <button className= 'ready-btn'onClick={ () => handleStop () }>Entregar</button>
     </div>
   )
 }

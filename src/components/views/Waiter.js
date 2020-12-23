@@ -29,7 +29,7 @@ export default function Waiter() {
     time: 0,
     sending: true,
     ready: false,
-    delivery:false
+    delivery: false
   } 
 
   const navWaiter = [
@@ -51,12 +51,12 @@ export default function Waiter() {
             data={Data.menu}
             order={order}
             setOrder={setOrder} 
-            />
+          />
         </section>
 
         <section className='Order-section'>
           <div className='Order'>
-            <ClientName  setClient={setClient} />
+            <ClientName setClient={setClient} />
             <OrderResume />
 
           <div className='Order-products-container'>

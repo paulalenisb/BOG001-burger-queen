@@ -1,5 +1,5 @@
 import firebase from 'firebase/app';
-import 'firebase/firestore'
+import 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -20,10 +20,10 @@ export default async function newOrder (orderObj) {
 	try {
 		const order = await db.collection('order').add({
       name: orderObj.name,
-      uid:orderObj.uid,
+      uid: orderObj.uid,
       time: orderObj.time,
       products: orderObj.products,
-      date: firebase.firestore.Timestamp.now(),
+      date: db.Timestamp.now(),
       totalOrder: orderObj.totalOrder,
       sending: orderObj.sending,
       ready: orderObj.ready,

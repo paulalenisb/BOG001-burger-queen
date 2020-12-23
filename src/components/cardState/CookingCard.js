@@ -5,6 +5,7 @@ import { updateData } from '../../firebaseFunc';
 import '../../styles/cardState/CookingCard.css'
 
 export default function CookingCard({ order, index, setReady }) {
+
   const [time, setTime] = useState(0);
   //update
   const hours = Math.floor((time % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -27,7 +28,7 @@ export default function CookingCard({ order, index, setReady }) {
   }
 
   return(
-    <div className='Cooking-card'key={index +'orderMaked'}>
+    <div className='Cooking-card' key={index +'orderMaked'}>
         <div className='Info-name-clock'>
           <div className='Name-client'>
             <h3>Cliente:</h3>
@@ -55,7 +56,7 @@ export default function CookingCard({ order, index, setReady }) {
         </ul>
       </div>
 
-      <button className= 'ready-btn'onClick={() => handleStop() }>¡Listo!</button>
+      <button className='ready-btn' onClick={ () => handleStop() }>¡Listo!</button>
     </div>
   )
 }

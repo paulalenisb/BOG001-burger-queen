@@ -9,20 +9,20 @@ import '../../styles/viewsCss/Kitchen.css';
 
   export default function Kitchen() {
 
-    const [orderMaked, setOrderMaked]= useState([]);
-    const [ready, setReady] = useState(false);
+    const [orderMaked, setOrderMaked]= useState([]); // Órdenes por hacer
+    const [ready, setReady] = useState(false); // Estado órdenes btn ¡Listo!
 
     const navKitchen = [
       {route: '/Kitchen', name:'Pedidos'},
       {route: '/HistoryOrder', name:'Historial de Pedidos'}
     ]
 
-    //Todo useEffect sucede despues del return
+    // Todo useEffect sucede despues del return
     useEffect(()=>{
-      setReady(false)
+      setReady(false);
       const arrayData = [];
       snapshotGettingData('order', arrayData, setOrderMaked);
-    }, [ready, setReady]) //aqui van las que cosas que hacen iterar el useEffect
+    }, [ready, setReady]) // Aquí van las que cosas que hacen iterar el useEffect
     
     return (
       <div className="Kitchen-section">

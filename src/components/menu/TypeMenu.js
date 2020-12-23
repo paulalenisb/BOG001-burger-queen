@@ -6,13 +6,12 @@ import '../../styles/menu/TypeMenu.css';
 
 export default function TypeMenu({ data, order, setOrder }) {
 
-  const subMenuLunch = ['Burgers', 'Side-Orders','Drinks']
+  const subMenuLunch = ['Burgers','Side-Orders','Drinks']
 
   const [foodType, setFoodType] = useState('Breakfast');
   const [subMenu, setSubMenu] = useState('Burgers');
-  const [meatOptn, setMeatOptn] = useState('');
 
-  const menu = Object.keys(data).filter((productKey => {
+  const menuFilter = Object.keys(data).filter((productKey => {
     if (foodType !== data[productKey].type){
       return false // W/out type & submenu
     }
@@ -42,28 +41,26 @@ export default function TypeMenu({ data, order, setOrder }) {
       <div className='Products-container'>
         {
         foodType === 'Lunch-Dinner' ?
-        subMenuLunch.map((product, index) => (
+        subMenuLunch.map((category, index) => (
           <button
-            key={'button' + index}
+            key={`${index}button`}
             className='Submenu-btn'
-            value={product}
+            value={category}
             onClick={(e) => setSubMenu(e.target.value)}
-          >{product}</button>
+          >{category}</button>
           ))
         : null
         }
 
         {
-        menu.map((product, index) => (
+        menuFilter.map((product, index) => (
           <Cards
-            key={'cards' + index}
+            key={`${index}cards`}
             data={data}
             product={product}
             index={index}
-            subMenu= {subMenu}
+            subMenu={subMenu}
             foodType={foodType}
-            meatOptn={meatOptn}
-            setMeatOptn={setMeatOptn}
             order={order}
             setOrder={setOrder}
           />

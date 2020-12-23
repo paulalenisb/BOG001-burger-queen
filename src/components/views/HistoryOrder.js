@@ -9,7 +9,7 @@ import '../../styles/viewsCss/Kitchen.css';
 
   export default function HistoryOrder() {
 
-    const [orderMaked, setOrderMaked]= useState([]);
+    const [historyOrders, setHistoryOrders] = useState([]); 
 
     const navKitchen = [
       {route: '/Kitchen', name:'Pedidos'},
@@ -19,11 +19,7 @@ import '../../styles/viewsCss/Kitchen.css';
     //Todo useEffect sucede despues del return 
     useEffect(()=>{
       const arrayData = [];
-      snapshotGettingData('order', arrayData, setOrderMaked);
-      /* gettingData('order').then((doc) => {
-        const orders = doc.docs.map(doc=>{ return { id: doc.id, ...doc.data()}});
-        setOrderMaked(orders)
-      });  */
+      snapshotGettingData('order', arrayData, setHistoryOrders);
     }, []) 
     
     return (
@@ -31,7 +27,7 @@ import '../../styles/viewsCss/Kitchen.css';
         <NavBar nav={navKitchen}/>
 
         <div className='Kitchen'>
-          {orderMaked.filter((algo) =>  algo.delivery === true && algo.ready === true).map((order, index)=>(
+          {historyOrders.filter((completeOrder) =>  completeOrder.delivery === true && completeOrder.ready === true).map((order, index)=>(
             <HistoryCard 
               order={order} 
               index={index} 

@@ -24,14 +24,14 @@ export default function HistoryCard({ order, index }) {
       <div className='Order-products'>
         <ul className='Cooking-card-quantity'>
           Cantidad
-          {order.products.map((product,index)=>(
+          {order.products.map((product, index)=>(
             <li key={index+"quantity"}>{product.quantity}</li>
           ))}
         </ul>
 
         <ul className='Cooking-card-products'>
           Producto
-          {order.products.map((product,index)=>(
+          {order.products.map((product, index)=>(
             <li key={index +"product"}>{product.product}</li>
           ))}
         </ul>

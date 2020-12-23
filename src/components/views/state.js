@@ -6,26 +6,28 @@ import { snapshotGettingData } from '../../firebaseFunc';
 import ReadyToDelivery from '../cardState/readyToDelivery'
 
 
-export default function  orderState() {
+export default function orderState() {
     
-    const [delivery, setDelivery]= useState([])
-    const [handing, setHanding] = useState (false)
-    const navWaiter = [
-      {route: '/waiter', name:'Nuevo Pedido'},
-      {route: '/orderState', name:'Pedidos Listos'}
-    ]
+  const [delivery, setDelivery]= useState([]); // Órdenes por entregar
+  const [handing, setHanding] = useState(false); // Estado órdenes btn ¡Entregar!
 
-    useEffect(()=>{
-      setHanding(false)
-      const arrayData =[];
-      snapshotGettingData('order', arrayData, setDelivery);
-    }, [handing, setHanding])
+  const navWaiter = [
+    {route: '/waiter', name:'Nuevo Pedido'},
+    {route: '/orderState', name:'Pedidos Listos'}
+  ]
+
+  useEffect(() => {
+    setHanding(false)
+    const arrayData =[];
+    snapshotGettingData('order', arrayData, setDelivery);
+  }, [handing, setHanding])
+
     return (
       <div className="Kitchen-section">
         <NavBar nav={navWaiter} />
 
         <div className='Kitchen'>
-          {delivery.filter((orderWaiter) => orderWaiter.ready === true && orderWaiter.delivery===false).map((deliveryOrder, index)=>(
+          {delivery.filter((orderWaiter) => orderWaiter.ready === true && orderWaiter.delivery === false).map((deliveryOrder, index)=>(
             <ReadyToDelivery 
               order={deliveryOrder} 
               index={index} 

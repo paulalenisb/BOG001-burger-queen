@@ -5,15 +5,16 @@ import newOrder from '../../firebaseConfig.js'
 import '../../styles/order/OrderBtn.css';
 
 export default function OrderBtn({objOrder, setOrder, setClient}) {
-  const closeAll = ()=>{
+
+  const cleanAll = ()=>{
     setOrder([]);
     setClient('');
   }
 
   return (
     <div className='Order-btn-container'>
-      <button className='Cancel-order-btn'onClick ={()=> closeAll()}>Cancelar</button>
-      <button className='Add-order-btn' onClick ={()=> {newOrder(objOrder); closeAll()} }>Ordenar</button>
+      <button className='Cancel-order-btn'onClick ={()=> cleanAll()}>Cancelar</button>
+      <button className='Add-order-btn' onClick ={()=> {newOrder(objOrder); cleanAll()} }>Ordenar</button>
     </div>
   )
 };
