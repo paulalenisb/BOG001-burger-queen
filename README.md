@@ -8,7 +8,7 @@
 * [2. Historia de usuarios](#2-historia-de-usuarios)
 * [3. Prototipos](#3-prototipos)
 * [4. Solución final](#4-solución-final)
-* [5. Objetivos de aprendizaje](#5-objetivos-de-aprendizaje)
+* [5. Tecnologías Usadas](#5-tecnologías-usadas)
 
 
 ## 1. Definición de la necesidad
@@ -128,7 +128,7 @@ rápidamente a los clientes que las hicieron.
 ## 4. Solución final
 <p align="center"> <img src="src/assets/images/BQGif.gif" width="1000" > </p>
 
-## 5. Objetivos de aprendizaje
+## 5. Tecnologías Usadas
 
 
 ### HTML y CSS
@@ -137,7 +137,6 @@ rápidamente a los clientes que las hicieron.
 * [x] Uso de selectores de CSS.
 * [x] Construir tu aplicación respetando el diseño realizado (maquetación).
 * [x] [Uso de flexbox en CSS.](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-* [ ] [Uso de Media Queries.](https://developer.mozilla.org/es/docs/CSS/Media_queries)
 
 ### JavaScript
 
@@ -152,9 +151,6 @@ rápidamente a los clientes que las hicieron.
 * [x] [Uso de callbacks.](https://developer.mozilla.org/es/docs/Glossary/Callback_function)
 * [x] [Consumo de Promesas.](https://scotch.io/tutorials/javascript-promises-for-dummies#toc-consuming-promises)
 
-### Testing
-
-* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
 
 ### Estructura del código y guía de estilo
 
@@ -185,7 +181,6 @@ rápidamente a los clientes que las hicieron.
 * [x] [Renderizado condicional.](https://es.reactjs.org/docs/conditional-rendering.html)
 * [x] [Elevación de estados.](https://es.reactjs.org/docs/lifting-state-up.html)
 * [x] [`hooks`](https://es.reactjs.org/docs/hooks-intro.html)
-* [ ] [`CSS` modules.](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet)
 * [x] [React Router.](https://reacttraining.com/react-router/web)
 
 ### UX
